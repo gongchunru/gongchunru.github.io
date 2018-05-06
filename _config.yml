@@ -28,12 +28,12 @@ nav_lists:
 
 paths:
   base: /blog
-  home: /
+  home: /blog
   all:  /blog/all.html
-  rss:  /feed.xml
+  # rss:  /feed.xml
 
 ## GitHub repository (if the site is hosted by GitHub) ##
-repository: kitian616/kitian616.github.io
+repository: gongchunru/gongchunru.github.io
 repository_tree: master
 
 ## Language & timezone ##
@@ -42,14 +42,14 @@ timezone: Asia/Shanghai
 
 ## Author & social ##
 author:
-  name: "Tian Qi"
-  email: kitian616@outlook.com
+  name: "gongchunru"
+  email: gongchunru@gmail.com
   # facebook:  #your Facebook username
-  twitter: kitian616
-  github:  kitian616
-  googleplus: 101827554735084402671
-  weibo: 234695683
-  douban: kitian616
+  twitter: gongchunru
+  github:  gongchunru
+  # googleplus: 101827554735084402671
+  weibo: 1703490903
+  # douban: kitian616
   # linkedin:  #your Linkedin username
 
 ## Comment system (Disqus) ##
