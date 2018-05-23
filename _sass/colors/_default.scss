@@ -6,8 +6,8 @@
 
 // main colors
 // $main-color-1:     #fc4d50;
-// $main-color-1:     #0366d6;
-$main-color-1:     #D6EDFF;
+$main-color-1:     #0366d6;
+// $main-color-1:     #D6EDFF;
 $text-color-1:     #fff;
 
 $main-color-2:     #fca24d;
@@ -27,7 +27,8 @@ $text-background-color: rgba(#000, .05);
 // border and shadow colors
 $border-color:     mix(#000, $background-color, 20%);
 $border-color-l:   mix(#000, $background-color, 10%);
-$select-color:     rgba($main-color-1, .5);
+// $select-color:     rgba($main-color-1, .5);
+$select-color:     rgba(#D6EDFF, .5);
 $decorate-color:   rgba(#000, .1);
 
 // function colors
