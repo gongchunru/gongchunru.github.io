@@ -51,6 +51,7 @@ body {
   ::selection {
     background: $select-color;
   }
+  letter-spacing: 0.01rem;
 }
 
 input, textarea, select, button {
