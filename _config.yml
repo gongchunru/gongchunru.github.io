@@ -6,7 +6,7 @@
 # Site
 title: NexT
 subtitle:
-description:
+description: 多多提交文章
 author: gongchunru
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
@@ -263,9 +263,9 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
+  # display: post
   #display: always
-  #display: hide
+  display: hide
   #display: remove
 
   # Sidebar offset from top menubar in pixels.
@@ -701,6 +701,10 @@ vendors:
   # https://github.com/ethantw/Han
   han:
 
+
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: http://ww1.sinaimg.cn/large/65893557ly1fs1oxvjo7cj20ff0ffdhf.jpg
+alipay: http://ww1.sinaimg.cn/large/65893557gy1fs1ou2rjjwj20d40d7js7.jpg
 
 # Assets
 css: assets/css
