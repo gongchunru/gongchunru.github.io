@@ -1,0 +1,91 @@
+---
+layout: post
+title: 关于shadowsockets和代理使用等
+tags: cs
+category: cs
+date: 2018-07-26 16:30:00 +08:00
+modify_date: 2018-07-26 16:30:00 +08:00
+---
+
+![](https://ws1.sinaimg.cn/large/65893557ly1fthl43vn1bj20zk0l1npd.jpg)
+
+记录下自己搭建shadowsocks，以及手机电脑使用代理的过程。技术交流，不作恶😊。
+
+<!-- more -->
+
+## 自建shadowsocks
+
+
+
+### 1. 购买主机
+
+#### 1.1 免费获取主机
+
+这里获取的是Google云主机，新注册用户可以免费获取$300，具体参考 [如何免费打造一个安全稳定超高速的科学上网环境](https://medium.com/@waylybaye/%E5%A6%82%E4%BD%95%E5%85%8D%E8%B4%B9%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E5%AE%89%E5%85%A8%E7%A8%B3%E5%AE%9A%E8%B6%85%E9%AB%98%E9%80%9F%E7%9A%84%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%8E%AF%E5%A2%83-fee52b7ad2f4)。 这篇文需要先开启代理才可以看，当然要注册Google也需要先开启代理🐶。
+
+#### 1.2 购买vultr主机
+
+通过这个链接注册购买你我都会有优惠: [Vultr](https://www.vultr.com/?ref=7046350) 。 每个月最低的消费在$2.5。
+
+### 2. 搭建shadowsocks服务
+
+1. 新建实例。Google的云主机我会选择以下的配置，区域和地区是我目前使用的延迟比较低的。当然CPU和硬盘可以使用更高的配置。使用Debian 9是因为自带了[BBR](https://github.com/google/bbr) 可以方便的开启。
+
+![](https://ws1.sinaimg.cn/large/65893557ly1fthlmgbaa1j20n50e0gna.jpg)
+
+2. 新建shadowsocks服务。 可以选择[一键安装脚本](https://teddysun.com/486.html)；也可以使用hyperApp进行安装。
+
+3. [开始BBR服务](https://www.moerats.com/archives/297/)。debian 9开启bbr步骤如下， 开启之后，在YouTube上面观看4K视频还是很流畅的。
+
+   1. 修改系统变量：
+
+      ```bash
+      echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+      echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+      ```
+
+   2. 保存生效
+
+      ```bash
+      sysctl -p
+      ```
+
+   3. 执行
+
+      ```bash
+      sysctl net.ipv4.tcp_available_congestion_control 
+      ```
+
+   4. 执行
+
+      ```bash
+      lsmod | grep bbr 
+      ```
+
+      检测是否开启BBR
+
+### 使用代理服务
+
+#### Mac
+
+Mac端推荐使用Surge，规则可以使用[lhie1](https://github.com/lhie1/Rules)。当然也可以使用ssr客户端 [**ShadowsocksX-NG-R8.dmg**](https://github.com/qinyuhang/ShadowsocksX-NG-R/releases/download/1.4.3-R8-build3/ShadowsocksX-NG-R8.dmg) 。
+
+这里推荐[Surge为Parallels虚拟机代理上网](https://juejin.im/post/5ae921bf6fb9a07aad17528c)
+
+#### Windows
+
+Windows可以使用[701 KB **ShadowsocksR-4.7.0.1-win.7z**](https://github.com/shadowsocksr-rm/shadowsocksr-csharp/releases/download/4.7.0.1/ShadowsocksR-4.7.0.1-win.7z)
+
+#### iOS
+
+iOS可以使用[Shadowrocket](https://itunes.apple.com/us/app/shadowrocket/id932747118) 
+
+### 免费的ss和ssr
+
+1. telegram群组：https://t.me/gyjclub
+2. https://fangeqiang.com/408.html
+3. https://doub.io/sszhfx/
+4. https://shadowsocks-share.herokuapp.com/
+
+
+
