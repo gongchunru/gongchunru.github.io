@@ -635,7 +635,7 @@
   word-break: normal;
 }
 
-.markdown-body .highlight pre,
+/* .markdown-body .highlight pre,
 .markdown-body pre {
   padding: 16px;
   overflow: auto;
@@ -643,7 +643,7 @@
   line-height: 1.45;
   background-color: #f6f8fa;
   border-radius: 3px;
-}
+} */
 
 .markdown-body pre code {
   display: inline;
