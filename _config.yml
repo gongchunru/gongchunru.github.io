@@ -26,7 +26,10 @@ bio: '哈哈，加油!'
 search: true
 
 # Night mode
-nightMode: true
+nightMode: false
+
+# Global comments setting
+comments: true
 
 # Comments
 disqus: false

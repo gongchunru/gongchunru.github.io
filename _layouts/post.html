@@ -111,6 +111,13 @@
       <div id="lv-container" data-id="city" data-uid="{{ site.livere_uid }}">
     </section>
     {% endif %}
+
+    {% if page.comments and site.comments %}
+    <section class="post-footer-item comment">
+        <div id="comments"></div>
+    </section>
+    {% endif %}
+
   </section>
 
   {% include footer.html %}
@@ -173,8 +180,24 @@
 {% endif %}
 
   <noscript>为正常使用评论功能请激活JavaScript。</noscript>
+  
   <script src="/assets/js/prism.js"></script>
   <script src="/assets/js/index.min.js"></script>
+  <script src="/assets/js/gitment.browser.js"></script>
+
+  {% if page.comments and site.comments %}
+  <script>
+        (new Gitment({
+          owner: 'gongchunru',
+          repo: 'gongchunru.github.io',
+          oauth: {
+            client_id: '525e13e388ef9a9b631b',
+            client_secret: '61bf2527615ab25942de4b4dba6ba489b9d123a6',
+          },
+        })).render('comments');
+  </script>
+  {% endif %}
+
 </body>
 
 </html>
