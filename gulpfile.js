@@ -37,9 +37,9 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 // var cssnano = require('cssnano');
-var autoprefixer = require('autoprefixer');
+// var autoprefixer = require('autoprefixer');
 // var sourcemaps = require('gulp-sourcemaps');
-var postcss = require('gulp-postcss');
+// var postcss = require('gulp-postcss');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var cp = require('child_process');
@@ -74,9 +74,9 @@ function style() {
             outputStyle: 'expanded',
             onError: browserSync.notify
         }))
-        .pipe(postcss([
-            autoprefixer()
-        ]))
+        // .pipe(postcss([
+        //     autoprefixer()
+        // ]))
         .pipe(sass())
         .pipe(gulp.dest(paths.styles.dest))
         .pipe(cleanCSS())
@@ -92,17 +92,11 @@ function style() {
 }
 
 function js() {
-    return gulp.src([
-        // './node_modules/jquery/dist/jquery.min.js',
-        // './node_modules/popper.js/dist/umd/popper.min.js',
-        // './node_modules/bootstrap/dist/js/bootstrap.min.js',
-        // './node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
-        paths.scripts.src
-    ])
+    return gulp.src('dev/js/index.js')
         .pipe(uglify())
         // .pipe(concatjs('app.bundle.js'))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(paths.scripts.dest))
+        .pipe(gulp.dest('assets/js'))
         .pipe(browserSync.reload({ stream: true }))
 }
 

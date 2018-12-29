@@ -47,11 +47,21 @@ PasswordAuthentication yes //默认为no，改为yes开启密码登陆
 
 
 
-## 4. 重启`SSH`服务使修改生效，`Ubuntu`同样适用
+## 4. 重启`SSH`服务
+
+`Ubuntu` `debian`适用
 
 ```bash
 /etc/init.d/ssh restart
 ```
+
+`Centos 7`适用:
+
+```bash
+systemctl restart sshd.service
+```
+
+
 
 
 
