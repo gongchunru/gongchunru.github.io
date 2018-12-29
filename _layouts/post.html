@@ -8,19 +8,22 @@
 <![endif]-->
   <input id="nm-switch" type="hidden" value="{{ site.nightMode }}"> {% include header.html %}
 
-  <header class="g-banner post-header {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }} {% unless page.cover %}post-no-cover{% endunless %}" data-theme="{{ site.theme-color }}">
+  <header class="g-banner post-header {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }} {% unless page.cover %}post-no-cover{% endunless %}"
+    data-theme="{{ site.theme-color }}">
     <div class="post-wrapper">
       <div class="post-tags">
         {% if page.tags.size > 0 %}
-          {% for tag in page.tags  %}
-            <a href="{{ "tags#" | append: tag | absolute_url }}" class="post-tag">{{ tag }}</a>
-          {% endfor %}
+        {% for tag in page.tags %}
+        <a href="{{ "tags#" | append: tag | absolute_url }}" class="post-tag">{{ tag }}</a>
+        {% endfor %}
         {% endif %}
       </div>
       <h1>{{ page.title }}</h1>
       <div class="post-meta">
-        <span class="post-meta-item"><i class="iconfont icon-author"></i><a href="{{ site.url }}" target="_blank" rel="author">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a></></span>
-        <time class="post-meta-item" datetime="{{ page.date | date:"%y-%m-%d" }}"><i class="iconfont icon-date"></i>{{ page.date | date_to_string }}</time>
+        <span class="post-meta-item"><i class="iconfont icon-author"></i><a href="{{ site.url }}" target="_blank" rel="author">{%
+            if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a></></span>
+        <time class="post-meta-item" datetime="{{ page.date | date:"%y-%m-%d" }}"><i class="iconfont icon-date"></i>{{
+          page.date | date_to_string }}</time>
       </div>
     </div>
     {% if page.cover %}
@@ -42,11 +45,26 @@
       {% include reward.html %}
     {% endif %}
 
+
     {% if site.social-share %}
     <div class="social-share-wrapper">
       <div class="social-share"></div>
     </div>
     {% endif %}
+
+    <br/>
+    <br />
+    <br />
+
+
+    <article class="markdown-body" align="center">
+      <!-- <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /> -->
+      本作品采用<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0 国际许可协议</a>进行许可。
+      转载本站文章请注明作者和出处。
+    </article>
+
+
+
   </div>
 
   <section class="author-detail">
@@ -63,8 +81,8 @@
         {% for s in site.sns %}
         <li>
           <a href="{{ s[1] }}" target="_blank">
-                    <i class="iconfont icon-{{ s[0] }}"></i>
-                </a>
+            <i class="iconfont icon-{{ s[0] }}"></i>
+          </a>
         </li>
         {% endfor %}
       </ul>
@@ -82,20 +100,20 @@
         <div class="filter"></div>
         <img src="{{ page.next.cover }}" alt="">
         {% endif %}
-     </div>
+      </div>
       {% endif %}
 
       {% if page.previous.url %}
       <div class="read-next-item">
         <a href="{{ page.previous.url }}" class="read-next-link"></a>
-          <section>
-            <span>{{ page.previous.title }}</span>
-            <p>{{ page.previous.excerpt | strip_html | strip_newlines | truncate: 60}}</p>
-          </section>
-          {% if page.previous.cover %}
-          <div class="filter"></div>
-          <img src="{{ page.previous.cover }}" alt="">
-          {% endif %}
+        <section>
+          <span>{{ page.previous.title }}</span>
+          <p>{{ page.previous.excerpt | strip_html | strip_newlines | truncate: 60}}</p>
+        </section>
+        {% if page.previous.cover %}
+        <div class="filter"></div>
+        <img src="{{ page.previous.cover }}" alt="">
+        {% endif %}
       </div>
       {% endif %}
     </section>
@@ -114,8 +132,8 @@
 
     {% if page.comments and site.comments %}
     <section class="post-footer-item comment">
-        <!-- <div id="comments"></div> -->
-        <div id="gitalk-container"></div>
+      <!-- <div id="comments"></div> -->
+      <div id="gitalk-container"></div>
     </section>
     {% endif %}
 
@@ -132,15 +150,15 @@
         {% for i in site.social-share-items %}
           '{{ i }}'
           {% if forloop.last == false %},
-          {% endif %}
-        {% endfor %}
+    {% endif %}
+    {% endfor %}
       ],
-      wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeTitle: "分享到微信朋友圈",
       wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
     });
   </script>
 
-{% if site.disqus %}
+  {% if site.disqus %}
   <script>
     /**
      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -151,7 +169,7 @@
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
-    (function() { // DON'T EDIT BELOW THIS LINE
+    (function () { // DON'T EDIT BELOW THIS LINE
       var d = document,
         s = d.createElement('script');
       /*写入自己的disqus信息*/
@@ -160,12 +178,12 @@
       (d.head || d.body).appendChild(s);
     })();
 
-</script>
-{% endif %}
+  </script>
+  {% endif %}
 
-{% if site.livere %}
-<script>
-    (function(d, s) {
+  {% if site.livere %}
+  <script>
+    (function (d, s) {
       var j, e = d.getElementsByTagName(s)[0];
 
       if (typeof LivereTower === 'function') {
@@ -180,10 +198,10 @@
     })(document, 'script');
 
   </script>
-{% endif %}
+  {% endif %}
 
   <noscript>为正常使用评论功能请激活JavaScript。</noscript>
-  
+
   <script src="/assets/js/prism.js"></script>
   <script src="/assets/js/index.min.js"></script>
   <!-- <script src="/assets/js/gitment.browser.js"></script> -->
@@ -191,25 +209,25 @@
 
   {% if page.comments and site.comments %}
   <script>
-        // (new Gitment({
-        //   owner: 'gongchunru',
-        //   repo: 'gongchunru.github.io',
-        //   oauth: {
-        //     client_id: '525e13e388ef9a9b631b',
-        //     client_secret: '61bf2527615ab25942de4b4dba6ba489b9d123a6',
-        //   },
-        // })).render('comments');
-        const gitalk = new Gitalk({
-            clientID: '525e13e388ef9a9b631b',
-            clientSecret: '61bf2527615ab25942de4b4dba6ba489b9d123a6',
-            repo: 'gongchunru.github.io',
-            owner: 'gongchunru',
-            admin: ['gongchunru'],
-            // id: location.pathname,      // Ensure uniqueness and length less than 50
-            id: "{{ page.url | prepend: site.host_url }}",
-            distractionFreeMode: false  // Facebook-like distraction free mode
-          })
-          gitalk.render('gitalk-container')
+    // (new Gitment({
+    //   owner: 'gongchunru',
+    //   repo: 'gongchunru.github.io',
+    //   oauth: {
+    //     client_id: '525e13e388ef9a9b631b',
+    //     client_secret: '61bf2527615ab25942de4b4dba6ba489b9d123a6',
+    //   },
+    // })).render('comments');
+    const gitalk = new Gitalk({
+      clientID: '525e13e388ef9a9b631b',
+      clientSecret: '61bf2527615ab25942de4b4dba6ba489b9d123a6',
+      repo: 'gongchunru.github.io',
+      owner: 'gongchunru',
+      admin: ['gongchunru'],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: "{{ page.url | prepend: site.host_url }}",
+      distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
   </script>
   {% endif %}
 
