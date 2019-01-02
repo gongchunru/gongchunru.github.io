@@ -36,7 +36,7 @@ disqus: false
 disqus_url: 'https://gongchunru.disqus.com/embed.js'
 
 livere: false
-livere_uid: MTAyMC8yODEwMC80Njcz
+livere_uid: 
 
 # Reward 赞赏功能 by Ray-Eldath
 reward:
@@ -92,3 +92,7 @@ permalink: /:year/:month/:day/:title.html
 
 # Plugins
 plugins: [jekyll-paginate]
+
+
+# Google Analytics
+google_analytics: UA-131584434-1
