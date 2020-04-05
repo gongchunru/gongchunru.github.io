@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gongchunru.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-04-05T03:37:49.142Z</updated>
+    <title>just for fun</title>
+    <updated>2020-04-05T07:33:33.405Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gongchunru.github.io"/>
     <link rel="self" href="https://gongchunru.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://gongchunru.github.io/images/avatar.png</logo>
     <icon>https://gongchunru.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, just for fun</rights>
     <entry>
         <title type="html"><![CDATA[ iTerm 2配置]]></title>
         <id>https://gongchunru.github.io/post/iterm-2-pei-zhi/</id>
