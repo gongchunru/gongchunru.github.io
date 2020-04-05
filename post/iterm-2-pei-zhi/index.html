@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
   <head>
       <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,14 +9,14 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="kveln">
-  <title>Gridea</title>
+  <title> iTerm 2配置 | Gridea</title>
   <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- <link href="https://gongchunru.github.io/media/css/bootstrap.min.css" rel="stylesheet"> -->
   <!--  <link href="https://gongchunru.github.io/media/css/all.min.css" rel="stylesheet" type="text/css"> -->
   <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <link rel="alternate" type="application/rss+xml" title="Gridea » Feed" href="https://gongchunru.github.io/atom.xml">
+  <link rel="alternate" type="application/rss+xml" title=" iTerm 2配置 | Gridea » Feed" href="https://gongchunru.github.io/atom.xml">
   <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
   <link href="https://gongchunru.github.io/styles/main.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
@@ -33,9 +33,15 @@
     gtag('config', 'UA-131584434-1');</script>
   
 
+    <meta property="og:description" content=" iTerm 2配置"/>
+    <meta property="og:url" content="https://gongchunru.github.io/post/iterm-2-pei-zhi/"/>
+    <meta property="og:locale" content="zh-CN"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Gridea"/>
   </head>
   <body>
-     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  	<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="https://gongchunru.github.io">Gridea</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,150 +79,140 @@
       </div>
     </div>
   </nav>
+  <!-- Page Header -->
   <header class="masthead" style="background-image: url('https://gongchunru.github.io/media/images/home-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>Gridea</h1>
-            <span class="subheading">温故而知新</span>
+          <div class="post-heading">
+          	<span class="tags">
+          	 
+        </span>
+            <h1> iTerm 2配置</h1>
+            <span class="meta">
+            	Posted on
+              2020-04-05，2 min read
+            </span>
           </div>
         </div>
       </div>
     </div>
   </header>
-      <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-       
-        <div class="post-preview">
-          <a href="https://gongchunru.github.io/post/iterm-2-pei-zhi/">
-            <h2 class="post-title">
-               iTerm 2配置
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              <!-- more -->
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <!-- more -->
 <p>首先要安装iterm2，然后就是各种折腾了。</p>
+<!--more-->
+<ol>
+<li>
+<p>安装zsh</p>
+<pre><code class="language-bash">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;
+</code></pre>
+</li>
+<li>
+<p>安装powerline</p>
+<pre><code class="language-bash"># 先安装pip指令
+sudo easy_install pip
+# 安装管道
+pip install --user powerline-status
+</code></pre>
+</li>
+<li>
+<p>安装powerline字体，为后面的ZSH主题作准备</p>
+<pre><code class="language-bash"># clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/gongchunru/image/img/20200405112330.png" alt="修改字体" loading="lazy"></figure>
+</li>
+<li>
+<p>安装和配置ZSH主题</p>
+<pre><code class="language-bash"># 1.下载主题
+git clone https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor
+# 2.安装主题
+cd oh-my-zsh-agnoster-fcamblor
+./install
+# 3.修改配置文件
+vim .zshrc
+# TODO 修改如下内容
+ZSH_THEME=&quot;agnoster&quot;
+# 修改完之后 使之生效
+source .zshrc
+</code></pre>
+</li>
+<li>
+<p>安装配色</p>
+<pre><code class="language-bash">git clone https://github.com/altercation/solarized
+cd solarized/iterm2-colors-solarized/
+open .
+</code></pre>
+</li>
+<li>
+<p>隐藏用户名和主机名</p>
+<pre><code class="language-bash"># 我的名字用户名和主机名是：gongchunru@gongchunrudeMBP
+# 修改 .zshrc文件
+vim .zshrc
+# 在文件内添加如下内容
+DEFAULT_USER=&quot;gongchunru&quot;
+# 记得以下
+source .zshrc
+</code></pre>
+</li>
+<li>
+<p>安装语法高亮插件 <a href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-syntax-highlighting</a></p>
+<pre><code class="language-bash"># 1. 下载安装插件
+brew install zsh-syntax-highlighting
+# 2. 添加配置在 .zshrc
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# 3. 使之生效
+source .zshrc
+</code></pre>
+</li>
+<li>
+<p>安装自动提示插件 <a href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions</a></p>
+<pre><code class="language-bash"># 1. 下载安装插件
+brew install zsh-autosuggestions
+# 2. 添加配置 .zshrc
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# 3. 使之生效
+source .zshrc
+</code></pre>
+</li>
+<li>
+<p>遇到的问题：</p>
+<pre><code class="language-bash"># 自动提示的代码颜色不对，看不到内容。
+# 修改文件 /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
+</code></pre>
+</li>
+</ol>
 
-            </h3>
-          <p class="post-meta">
-             <span class="time">2020-04-05</span>
-             <span>,</span>
-             <span class="post-stats">2 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
-        
-        <div class="post-preview">
-          <a href="https://gongchunru.github.io/post/xiu-gai-gcp-yong-hu-mi-ma-bing-kai-qi-root-deng-lu/">
-            <h2 class="post-title">
-              修改GCP用户密码并开启root登录
-            </h2>
+          
+          <p class="next-post">下一篇：
+            <a href="https://gongchunru.github.io/post/xiu-gai-gcp-yong-hu-mi-ma-bing-kai-qi-root-deng-lu/">
+              <span class="post-title">
+                修改GCP用户密码并开启root登录&rarr;
+              </span>
             </a>
-            <h3 class="post-subtitle">
-              
-            </h3>
-          <p class="post-meta">
-             <span class="time">2020-04-05</span>
-             <span>,</span>
-             <span class="post-stats">2 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
+          </p>
         
-        <div class="post-preview">
-          <a href="https://gongchunru.github.io/post/maco-jian-pan-an-jian-she-zhi/">
-            <h2 class="post-title">
-              macO键盘按键设置
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              
-            </h3>
-          <p class="post-meta">
-             <span class="time">2020-04-05</span>
-             <span>,</span>
-             <span class="post-stats">1 min read</span>
-            </p>
+        <div class="comment">
+          
         </div>
-        <hr>
-        <div class="clearfix">
-        </div>
-        
-        <div class="post-preview">
-          <a href="https://gongchunru.github.io/post/ji-suan-ji-ke-xue/">
-            <h2 class="post-title">
-              计算机科学
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              
-            </h3>
-          <p class="post-meta">
-             <span class="time">2020-04-05</span>
-             <span>,</span>
-             <span class="post-stats">2 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
-        
-        <div class="post-preview">
-          <a href="https://gongchunru.github.io/post/autoupdate-ti-shi-geng-xin-yi-zai-jin-xing-zhong-qing-shao-hou-zai-shi/">
-            <h2 class="post-title">
-              AutoUpdate提示：更新已在进行中。请稍后再试。
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              <!-- more -->
-<p>AutoUpdate提示：更新已在进行中。请稍后再试。<br>
-...</p>
-
-            </h3>
-          <p class="post-meta">
-             <span class="time">2020-04-05</span>
-             <span>,</span>
-             <span class="post-stats">1 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
-        
-        <div class="post-preview">
-          <a href="https://gongchunru.github.io/post/hello-gridea/">
-            <h2 class="post-title">
-              Hello Gridea
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              
-            </h3>
-          <p class="post-meta">
-             <span class="time">2018-12-12</span>
-             <span>,</span>
-             <span class="post-stats">2 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
-        
-        
-        
       </div>
     </div>
-  </div>
-
-  
-    <!-- Footer -->
+  </article>
+ <!-- Footer -->
   <footer>
     <div class="container">
       <div class="row">
@@ -287,3 +283,4 @@
   })(this));</script>
   </body>
 </html>
+
