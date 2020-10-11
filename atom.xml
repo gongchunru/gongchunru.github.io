@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gongchunru.github.io</id>
     <title>just for fun</title>
-    <updated>2020-04-30T04:40:16.519Z</updated>
+    <updated>2020-10-11T16:08:07.066Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gongchunru.github.io"/>
     <link rel="self" href="https://gongchunru.github.io/atom.xml"/>
@@ -121,11 +121,11 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
         <content type="html"><![CDATA[<!-- more -->
 <p>在<code>Google Cloud Platform</code>创建的<code>VM</code>实例只能通过【在浏览器窗口打开】。这里使用其他终端工具连接的设置。</p>
 <!-- more -->
-<h2 id="1-在gcp网页端登录ssh">1. 在<code>GCP</code>网页端登录<code>ssh</code></h2>
-<h2 id="2-通过sudo-su命令切换到root用户">2. 通过<code>sudo su</code>命令切换到<code>root</code>用户</h2>
+<h3 id="1-在gcp网页端登录ssh">1. 在<code>GCP</code>网页端登录<code>ssh</code></h3>
+<h3 id="2-通过sudo-su命令切换到root用户">2. 通过<code>sudo su</code>命令切换到<code>root</code>用户</h3>
 <pre><code class="language-bash">sudo su //切换到root用户
 </code></pre>
-<h2 id="3-修改ssh配置文件etcsshsshd_config">3. 修改SSH配置文件<code>/etc/ssh/sshd_config</code></h2>
+<h3 id="3-修改ssh配置文件etcsshsshd_config">3. 修改SSH配置文件<code>/etc/ssh/sshd_config</code></h3>
 <pre><code class="language-bash">vi /etc/ssh/sshd_config //编辑文件
 </code></pre>
 <p>找到PermitRootLogin和Pa	sswordAuthentication</p>
@@ -137,30 +137,40 @@ yesStrictModes yes
 # Change to no to disable tunnelled clear text passwords
 PasswordAuthentication yes //默认为no，改为yes开启密码登陆
 </code></pre>
-<h2 id="4-重启ssh服务">4. 重启<code>SSH</code>服务</h2>
+<h3 id="4-重启ssh服务">4. 重启<code>SSH</code>服务</h3>
 <p><code>Ubuntu</code> <code>debian</code>适用</p>
 <pre><code class="language-bash">/etc/init.d/ssh restart
 </code></pre>
 <p><code>Centos 7</code>适用:</p>
 <pre><code class="language-bash">systemctl restart sshd.service
 </code></pre>
-<h2 id="5-进行以下操作可使用putty-iterm等客户端通过用户名和密码访问实例">5. 进行以下操作，可使用<code>putty</code>、<code>iterm</code>等客户端通过用户名和密码访问实例</h2>
-<h3 id="51-为现有用户设置一个密码先查看当前登陆">5.1 为现有用户设置一个密码，先查看当前登陆</h3>
+<h3 id="5-进行以下操作可使用putty-iterm等客户端通过用户名和密码访问实例">5. 进行以下操作，可使用<code>putty</code>、<code>iterm</code>等客户端通过用户名和密码访问实例</h3>
+<ul>
+<li>
+<p>5.1 为现有用户设置一个密码，先查看当前登陆</p>
 <pre><code class="language-bash">who  //使用who查看当前登陆用户
 mapgun pts/0 2017-03-21 06:40
 root pts/1 2017-03-21 07:00
 </code></pre>
-<h3 id="52-可以看到当前登陆了mapgun和root用户修改指定用户密码即可">5.2 可以看到当前登陆了<code>mapgun</code>和<code>root</code>用户，修改指定用户密码即可</h3>
+</li>
+<li>
+<p>5.2 可以看到当前登陆了<code>mapgun</code>和<code>root</code>用户，修改指定用户密码即可</p>
 <pre><code class="language-bash">passwd mapgun //mapgun改为想要修改的用户名
 </code></pre>
-<h3 id="53-新增一个用户">5.3 新增一个用户</h3>
+</li>
+<li>
+<p>5.3 新增一个用户</p>
 <pre><code class="language-bash">useradd name  //新增用户
 passwd name  //设置用户密码
 </code></pre>
-<h3 id="54-设置root密码">5.4 设置<code>root</code>密码</h3>
+</li>
+<li>
+<p>5.4 设置<code>root</code>密码</p>
 <p>如果使用root密码登陆，需要设置root用户密码。</p>
 <pre><code class="language-bash">passwd root
 </code></pre>
+</li>
+</ul>
 ]]></content>
     </entry>
     <entry>
