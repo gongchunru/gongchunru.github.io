@@ -9,8 +9,10 @@
 <meta name="description" content="温故而知新">
 <meta name="theme-color" content="#000">
 <title>macOS键盘按键设置 | just for fun</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1602432340391">
+<link rel="shortcut icon" href="/favicon.ico?v=1608050796163">
+<link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/mist.css">
+
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
   href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
@@ -19,22 +21,11 @@
 <link href="/media/hljs/styles/androidstudio.css"
   rel="stylesheet">
 
-<link rel="stylesheet" href="/styles/main.css">
-
 <script src="/media/hljs/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
-  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
-  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
-  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-  onload="renderMathInElement(document.body);"></script>
-
-
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
 
@@ -138,7 +129,6 @@
               </li>
             
           
-          
         </ul>
       </nav>
     </div>
@@ -180,8 +170,8 @@
       
         <div class="post-list-sidebar">
           <div class="sidebar-title">
-            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
-            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
           </div>
         </div>
       
@@ -201,25 +191,24 @@
       <a href="/archives/">
         
         <span class="site-item-stat-count">5</span>
-        <span class="site-item-stat-name language" data-lan="article">文章</span>
+        <span class="site-item-stat-name">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="">
         <span class="site-item-stat-count">0</span>
-        <span class="site-item-stat-name language" data-lan="category">分类</span>
+        <span class="site-item-stat-name">分类</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
         <span class="site-item-stat-count">0</span>
-        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+        <span class="site-item-stat-name">标签</span>
       </a>
     </div>
   </div>
   
   
-
 
 
 </div>
@@ -265,7 +254,7 @@
       }
     } else if (prop === HTMLLIElement.prototype) {
       // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
         lList.push(elem);
       }
       for (let i = 0; i < elem.children.length; i++) {
@@ -503,7 +492,7 @@
 </script>
         <div class="section-box box-shadow-wrapper">
           <div class="section bg-color post post-page">
-            <section class="post-header">
+            <header class="post-header">
   <h1 class="post-title">
     <a class="post-title-link" href="https://gongchunru.github.io/post/maco-jian-pan-an-jian-she-zhi/">
       macOS键盘按键设置
@@ -513,23 +502,23 @@
     
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-04-05 11:10:02">2020-04-05</span>
+      <span>发布于</span>
+      <span>2020-04-05</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>1分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>191<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>191<span class="pc-show">字数</span></span>
     </span>
     
   </div>
-</section>
+</header>
             <div class="post-body next-md-body" id="post_body">
               <p>简单记录一下现在电脑键盘的按键设置：软件是：<a href="https://github.com/tekezo/Karabiner-Elements"><strong>Karabiner-Elements</strong></a></p>
 <h3 id="设置caps-lock按键">设置<code>CAPS LOCK</code>按键</h3>
@@ -571,20 +560,18 @@
 </ul>
 
             </div>
-            
-            
-              <div class="post-footer">
+            <div class="post-footer">
   <ul class="post-copyright">
     <li class="post-copyright-author">
-      <strong class="language" data-lan="author">本文作者：</strong>
+      <strong>本文作者：</strong>
       just for fun
     </li>
     <li class="post-copyright-link">
-      <strong class="language" data-lan="link">本文链接：</strong>
+      <strong>本文链接：</strong>
       <a href="https://gongchunru.github.io/post/maco-jian-pan-an-jian-she-zhi/" title="macOS键盘按键设置">https://gongchunru.github.io/post/maco-jian-pan-an-jian-she-zhi/</a>
     </li>
     <li class="post-copyright-license">
-      <strong class="language" data-lan="copyright">版权声明： </strong>
+      <strong>版权声明： </strong>
       本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
     </li>
   </ul>
@@ -608,7 +595,6 @@
     </div>
   </div>
 </div>
-            
             
   
     
@@ -640,8 +626,7 @@
     <div class="footer-box">
   <footer class="footer">
     <div class="copyright">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
-        href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
     </div>
     <div class="poweredby">
       Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
@@ -649,11 +634,11 @@
   </footer>
   
   
-  <div class="drawer-box left" id="drawer_box">
-    <span class="muse-line muse-line-first"></span>
-    <span class="muse-line muse-line-middle"></span>
-    <span class="muse-line muse-line-last"></span>
-  </div>
+    <div class="drawer-box left" id="drawer_box">
+      <span class="muse-line muse-line-first"></span>
+      <span class="muse-line muse-line-middle"></span>
+      <span class="muse-line muse-line-last"></span>
+    </div>
   
   <div class="mist back-to-top" id="back_to_top">
     <i class="fa fa-arrow-up"></i>
@@ -668,13 +653,13 @@
   let sideBarOpen = 'sidebar-open';
   let body = document.body;
   let back2Top = document.querySelector('#back_to_top'),
-    back2TopText = document.querySelector('#back_to_top_text'),
-    drawerBox = document.querySelector('#drawer_box'),
-    rightSideBar = document.querySelector('.sidebar'),
-    viewport = document.querySelector('body');
+  back2TopText = document.querySelector('#back_to_top_text'),
+  drawerBox = document.querySelector('#drawer_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
 
   function scrollAnimation(currentY, targetY) {
-
+   
     let needScrollTop = targetY - currentY
     let _currentY = currentY
     setTimeout(() => {
@@ -689,13 +674,13 @@
     }, 1)
   }
 
-  back2Top.addEventListener("click", function (e) {
+  back2Top.addEventListener("click", function(e) {
     scrollAnimation(document.scrollingElement.scrollTop, 0);
     e.stopPropagation();
     return false;
   });
-
-  window.addEventListener('scroll', function (e) {
+  
+  window.addEventListener('scroll', function(e) {
     let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
     if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
       back2Top.classList.add('back-top-active');
@@ -708,10 +693,14 @@
     }
   });
 
-
+  
   let hasCacu = false;
-  window.onresize = function () {
-    calcuHeight();
+  window.onresize = function() {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
   }
 
   function calcuHeight() {
@@ -724,7 +713,7 @@
     }
   }
   calcuHeight();
-
+  
   let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
 
   if (drawerBox) {
@@ -736,21 +725,21 @@
     let openProp, closeProp;
     if (right) {
       openProp = {
-        paddingRight: RIGHT_MOVE_DIS
+        paddingRight: RIGHT_MOVE_DIS 
       };
       closeProp = {
         paddingRight: '0px'
       };
     } else {
       openProp = {
-        paddingLeft: RIGHT_MOVE_DIS
+        paddingLeft: RIGHT_MOVE_DIS 
       };
       closeProp = {
         paddingLeft: '0px'
       };
     }
 
-    drawerBox.onclick = function () {
+    drawerBox.onclick = function() {
       open = !open;
       window.Velocity(rightSideBar, 'stop');
       window.Velocity(viewport, 'stop');
@@ -760,11 +749,11 @@
           width: RIGHT_MOVE_DIS
         }, {
           duration: MOTION_TIME,
-          begin: function () {
-            window.Velocity(rightMotions, transitionDir, {});
+          begin: function() {
+            window.Velocity(rightMotions, transitionDir,{ });
           }
         })
-        window.Velocity(viewport, openProp, {
+        window.Velocity(viewport, openProp,{
           duration: MOTION_TIME
         });
       } else {
@@ -772,13 +761,13 @@
           width: '0px'
         }, {
           duration: MOTION_TIME,
-          begin: function () {
+          begin: function() {
             window.Velocity(rightMotions, {
               opacity: 0
             });
           }
         })
-        window.Velocity(viewport, closeProp, {
+        window.Velocity(viewport, closeProp ,{
           duration: MOTION_TIME
         });
       }
@@ -795,31 +784,12 @@
     let links = document.querySelectorAll('.post-body a')
     links.forEach(item => {
       if (!item.classList.contains('btn')) {
-        item.setAttribute("target", "_blank");
+        item.setAttribute("target","_blank");
       }
     })
   }
-
-  let faSearch = document.querySelector('#fa_search');
-  faSearch.addEventListener('click', function () {
-    document.querySelector('#search_mask').style = ''
-  })
-
   // 代码高亮
   hljs.initHighlightingOnLoad();
-  
-  // 离开当前页title变化
-  var leaveTitle = "";
-  if (leaveTitle) {
-    document.addEventListener('visibilitychange', function () {
-      if (document.visibilityState == 'hidden') {
-        normal_title = document.title;
-        document.title = leaveTitle;
-      } else {
-        document.title = normal_title;
-      }
-    });
-  }
 
 </script>
     <div class="light-box" id="light_box"></div>
@@ -843,7 +813,7 @@
       let lightImg = document.createElement('img');
       lightImg.src = this.src;
       lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
-      lightImg.style = `width: ${width}px;border-radius: 2px;`;
+      lightImg.style = `width: ${width}px; border: 1px solid #fff; border-radius: 2px;`;
       lightImg.onclick = function () {
         lightBox.style = '';
         this.remove();
@@ -852,298 +822,10 @@
     }
   })
 </script>
-    <div class="reward-mask" style="display: none;">
-  <div class="reward-relative">
-    <span class="close" aria-hidden="true">x</span>
-    <div class="reward-body">
-      <h2>感谢您的支持，我会继续努力的!</h2>
-      <div class="reward-img-box">
-        <div style="position: relative; width: 140px; height: 140px;">
-          
-          
-          
-        </div>
-      </div>
-      <p class="reward-word"></p>
-      <p class="reward-tip"></p>
-    </div>
-    <div class="bottom">
-      
-      
-    </div>
-  </div>
-</div>
-<style>
-  .reward-mask {
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #00000054;
-  }
-
-  .reward-relative {
-    position: relative;
-    width: 480px;
-    text-align: center;
-    margin: 0 auto;
-    border-radius: 5px;
-    background-color: #fff;
-    top: 50%;
-    margin-top: -205px;
-  }
-
-  .reward-relative .close {
-    position: absolute;
-    right: 10px;
-    font-weight: normal;
-    font-size: 16px;
-    color: #929292;
-  }
-
-  .reward-body {
-    padding: 40px 20px 20px;
-  }
-
-  .bottom {
-    display: flex;
-  }
-
-  .reward-btn {
-    text-align: center;
-  }
-
-  .reward-btn-text {
-    display: inline-block;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    background-color: #ff9734;
-    color: #FFF;
-    margin-top: 20px;
-  }
-
-  .pay-text {
-    margin-top: 10px;
-    padding: 10px;
-    flex: 1;
-    transition: all .2s linear;
-  }
-
-  .pay-text:hover {
-    background-color: #a5a5a536;
-  }
-
-  .reward-body h2 {
-    padding-top: 10px;
-    text-align: center;
-    color: #a3a3a3;
-    font-size: 16px;
-    font-weight: normal;
-    margin: 0 0 20px;
-  }
-
-  .reward-body h2:after,
-  .reward-body h2:before {
-    font-family: Arial, Helvetica, sans-serif;
-    background: 0 0;
-    width: 0;
-    height: 0;
-    font-style: normal;
-    color: #eee;
-    font-size: 80px;
-    position: absolute;
-    top: 20px;
-  }
-
-  .reward-body h2:before {
-    content: '\201c';
-    left: 50px;
-  }
-
-  .reward-body h2:after {
-    content: '\201d';
-    right: 80px;
-  }
-
-  .reward-img-box {
-    display: inline-block;
-    padding: 10px;
-    border: 6px solid #ea5f00;
-    margin: 0 auto;
-    border-radius: 3px;
-    position: relative;
-  }
-
-  .reward-img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-  }
-
-  @media (max-width: 767px) {
-    .reward-relative {
-      height: 100%;
-      top: 0px;
-      margin-top: 0;
-      width: auto;
-    }
-
-    .reward-relative .bottom {
-      flex-direction: column;
-    }
-
-    .reward-relative .pay-text {
-      width: 80%;
-      margin: 5px auto;
-      border: 1px solid silver;
-      padding: 6px;
-      border-radius: 4px;
-    }
-
-    .reward-body h2:after {
-      right: 40px;
-    }
-
-    .reward-body h2:after,
-    .reward-body h2:before {
-      font-size: 60px;
-    }
-
-    .reward-body h2:before {
-      left: 20px;
-    }
-  }
-</style>
-<script>
-  !function () {
-    var mask = document.querySelector('.reward-mask');
-    let close = document.querySelector('.reward-relative .close');
-    let rewardBtn = document.querySelector('.reward-btn');
-
-    let zfb = document.querySelector('#zfb'),
-      wx = document.querySelector('#wx'),
-      zfbBtn = document.querySelector('#zfbBtn'),
-      wxBtn = document.querySelector('#wxBtn');
-
-    if (zfbBtn && wxBtn) {
-      zfbBtn.addEventListener('click', () => {
-        window.Velocity(zfb, 'transition.slideLeftIn', {
-          duration: 400
-        });
-        window.Velocity(wx, 'transition.slideRightOut', {
-          display: 'none',
-          duration: 400
-        });
-      });
-
-      wxBtn.addEventListener('click', () => {
-        window.Velocity(wx, 'transition.slideRightIn', {
-          duration: 400
-        });
-        window.Velocity(zfb, 'transition.slideLeftOut', {
-          display: 'none',
-          duration: 400
-        });
-      });
-    }
-
-    rewardBtn.addEventListener('click', (e) => {
-      window.Velocity(mask, 'transition.slideDownIn', {
-        duration: 400
-      })
-    });
-
-    close.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.Velocity(mask, 'transition.slideUpOut', {
-        duration: 400
-      })
-    })
-  }()
-</script>
-
   </div>
 </body>
-
 <input hidden id="copy" />
 <script>
-  !function () {
-    let times = document.querySelectorAll('.publish-time');
-    for (let i = 0; i < times.length; i++) {
-      let date = times[i].dataset.t;
-      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
-      if (time < 60) {
-        str = time + '秒之前';
-      } else if (time < 3600) {
-        str = Math.floor(time / 60) + '分钟之前';
-      } else if (time >= 3600 && time < 86400) {
-        str = Math.floor(time / 3600) + '小时之前';
-      } else if (time >= 86400 && time < 259200) {
-        str = Math.floor(time / 86400) + '天之前';
-      } else {
-        str = times[i].textContent;
-      }
-      times[i].textContent = str;
-    }
-  }();
-</script>
-
-<script>
-  let language = '';
-  if (language !== '') {
-    let map = new Map();
-    if (language === 'en') {
-      map.set('search', 'Search');
-      map.set('category', 'Categories');
-      map.set('article', 'Articles');
-      map.set('tag', 'Tags');
-      map.set('top', 'Top');
-      map.set('publish', 'published');
-      map.set('minute', ' minutes');
-      map.set('read-more', 'Read More');
-      map.set('view', 'View');
-      map.set('words', ' words');
-      map.set('category-in', 'category in');
-      map.set('preview', 'Meta');
-      map.set('index', 'Toc');
-      map.set('no-archives', "You haven't created yet");
-      map.set('archives', " articles in total");
-      map.set('cloud-tags', " tags in total");
-      map.set('copyright', "Copyright: ");
-      map.set('author', "Author: ");
-      map.set('link', "Link: ");
-      map.set('leave-message', "Leave a message");
-      map.set('format', "Links Format");
-      map.set('site-name', "Name: ");
-      map.set('site-link', "Link: ");
-      map.set('site-desc', "Desc: ");
-      map.set('stat', " related results, taking ");
-      map.set('stat-time', " ms");
-      map.set('site-img', "Image: ");
-    }
-
-    if (map.size > 0) {
-      let lanElems = document.querySelectorAll('.language');
-      lanElems.forEach(elem => {
-        let lan = elem.dataset.lan, text = map.get(lan);
-        if (elem.__proto__ === HTMLInputElement.prototype) {
-          elem.placeholder = text
-        } else {
-          if (elem.dataset.count) {
-            text = elem.dataset.count + text;
-          }
-          elem.textContent = text;
-        }
-      })
-    }
-  }
   //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
   window.Clipboard = (function (window, document, navigator) {
     var textArea,
@@ -1206,6 +888,7 @@
       let code = e.currentTarget.querySelector('code');
       var text = code.innerText;
       if (e.srcElement.textContent === '复制成功') {
+        console.log('复制操作频率过高');
         return;
       }
       e.srcElement.textContent = '复制成功';
@@ -1229,19 +912,354 @@
     pre.appendChild(copyElem);
     pre.onclick = copyCode
   })
-
 </script>
 <script src="/media/js/motion.js"></script>
 
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 <script>
   var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 200
+    speed: 500
   });
 </script>
 
+<!-- <div class="search-mask" id="search_mask">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input type="text" placeholder="搜索">
+      </div>
+      <i class="fa fa-times-circle"></i>
+    </div>
+    <div class="result">
+      
+      <div class="item">
+        <a class="result-title" href="https://gongchunru.github.io/post/iterm-2-pei-zhi/"" data-c="
+          &lt;!-- more --&gt;
+&lt;p&gt;首先要安装iterm2，然后就是各种折腾了。&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装zsh&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sh -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装powerline&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 先安装pip指令
+sudo easy_install pip
+# 安装管道
+pip install --user powerline-status
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装powerline字体，为后面的ZSH主题作准备&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/gongchunru/image/img/20200405112330.png&#34; alt=&#34;修改字体&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装和配置ZSH主题&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 1.下载主题
+git clone https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor
+# 2.安装主题
+cd oh-my-zsh-agnoster-fcamblor
+./install
+# 3.修改配置文件
+vim .zshrc
+# TODO 修改如下内容
+ZSH_THEME=&amp;quot;agnoster&amp;quot;
+# 修改完之后 使之生效
+source .zshrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装配色&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/altercation/solarized
+cd solarized/iterm2-colors-solarized/
+open .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;隐藏用户名和主机名&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 我的名字用户名和主机名是：gongchunru@gongchunrudeMBP
+# 修改 .zshrc文件
+vim .zshrc
+# 在文件内添加如下内容
+DEFAULT_USER=&amp;quot;gongchunru&amp;quot;
+# 记得以下
+source .zshrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装语法高亮插件 &lt;a href=&#34;https://github.com/zsh-users/zsh-syntax-highlighting&#34;&gt;zsh-syntax-highlighting&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 1. 下载安装插件
+brew install zsh-syntax-highlighting
+# 2. 添加配置在 .zshrc
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# 3. 使之生效
+source .zshrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装自动提示插件 &lt;a href=&#34;https://github.com/zsh-users/zsh-autosuggestions&#34;&gt;zsh-autosuggestions&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 1. 下载安装插件
+brew install zsh-autosuggestions
+# 2. 添加配置 .zshrc
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# 3. 使之生效
+source .zshrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;遇到的问题：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# 自动提示的代码颜色不对，看不到内容。
+# 修改文件 /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&#39;fg=10&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+"> iTerm 2配置</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://gongchunru.github.io/post/xiu-gai-gcp-yong-hu-mi-ma-bing-kai-qi-root-deng-lu/"" data-c="
+          &lt;!-- more --&gt;
+&lt;p&gt;在&lt;code&gt;Google Cloud Platform&lt;/code&gt;创建的&lt;code&gt;VM&lt;/code&gt;实例只能通过【在浏览器窗口打开】。这里使用其他终端工具连接的设置。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h3 id=&#34;1-在gcp网页端登录ssh&#34;&gt;1. 在&lt;code&gt;GCP&lt;/code&gt;网页端登录&lt;code&gt;ssh&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;2-通过sudo-su命令切换到root用户&#34;&gt;2. 通过&lt;code&gt;sudo su&lt;/code&gt;命令切换到&lt;code&gt;root&lt;/code&gt;用户&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo su //切换到root用户
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3-修改ssh配置文件etcsshsshd_config&#34;&gt;3. 修改SSH配置文件&lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vi /etc/ssh/sshd_config //编辑文件
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;找到PermitRootLogin和Pa	sswordAuthentication&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# Authentication:
+LoginGraceTime 120
+PermitRootLogin yes //默认为no，需要开启root用户访问改为
+yesStrictModes yes 
 
-
+# Change to no to disable tunnelled clear text passwords
+PasswordAuthentication yes //默认为no，改为yes开启密码登陆
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;4-重启ssh服务&#34;&gt;4. 重启&lt;code&gt;SSH&lt;/code&gt;服务&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Ubuntu&lt;/code&gt; &lt;code&gt;debian&lt;/code&gt;适用&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;/etc/init.d/ssh restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;Centos 7&lt;/code&gt;适用:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;systemctl restart sshd.service
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;5-进行以下操作可使用putty-iterm等客户端通过用户名和密码访问实例&#34;&gt;5. 进行以下操作，可使用&lt;code&gt;putty&lt;/code&gt;、&lt;code&gt;iterm&lt;/code&gt;等客户端通过用户名和密码访问实例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;5.1 为现有用户设置一个密码，先查看当前登陆&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;who  //使用who查看当前登陆用户
+mapgun pts/0 2017-03-21 06:40
+root pts/1 2017-03-21 07:00
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;5.2 可以看到当前登陆了&lt;code&gt;mapgun&lt;/code&gt;和&lt;code&gt;root&lt;/code&gt;用户，修改指定用户密码即可&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;passwd mapgun //mapgun改为想要修改的用户名
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;5.3 新增一个用户&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;useradd name  //新增用户
+passwd name  //设置用户密码
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;5.4 设置&lt;code&gt;root&lt;/code&gt;密码&lt;/p&gt;
+&lt;p&gt;如果使用root密码登陆，需要设置root用户密码。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;passwd root
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+">修改GCP用户密码并开启root登录</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://gongchunru.github.io/post/maco-jian-pan-an-jian-she-zhi/"" data-c="
+          &lt;p&gt;简单记录一下现在电脑键盘的按键设置：软件是：&lt;a href=&#34;https://github.com/tekezo/Karabiner-Elements&#34;&gt;&lt;strong&gt;Karabiner-Elements&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;设置caps-lock按键&#34;&gt;设置&lt;code&gt;CAPS LOCK&lt;/code&gt;按键&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;单独按下还是&lt;code&gt;CAPS LOCK&lt;/code&gt;键，&lt;code&gt;macOS&lt;/code&gt;下是切换中英文输入法。&lt;/li&gt;
+&lt;li&gt;作为组合键使用的时候，&lt;code&gt;CAPS LOCK&lt;/code&gt;作为&lt;code&gt;ctrl&lt;/code&gt;使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;配置如下（配置文件路径为&lt;code&gt;~/.config/karabiner/karabiner.json&lt;/code&gt;）：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+    &amp;quot;manipulators&amp;quot;: [
+                            {
+                                &amp;quot;description&amp;quot;: &amp;quot;Change caps_lock to control when used as modifier, caps_lock when used alone&amp;quot;,
+                                &amp;quot;from&amp;quot;: {
+                                    &amp;quot;key_code&amp;quot;: &amp;quot;caps_lock&amp;quot;
+                                },
+                                &amp;quot;to&amp;quot;: [
+                                    {
+                                        &amp;quot;key_code&amp;quot;: &amp;quot;left_control&amp;quot;
+                                    }
+                                ],
+                                &amp;quot;to_if_alone&amp;quot;: [
+                                    {
+                                        &amp;quot;key_code&amp;quot;: &amp;quot;caps_lock&amp;quot;
+                                    }
+                                ],
+                                &amp;quot;type&amp;quot;: &amp;quot;basic&amp;quot;
+                            }
+                        ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;设置hjkl为方向键&#34;&gt;设置&lt;code&gt;hjkl&lt;/code&gt;为方向键&lt;/h3&gt;
+&lt;p&gt;​	方向键现在配合&lt;code&gt;right_command&lt;/code&gt;按键使用，不过略感不足。此配置为&lt;code&gt;Karabiner-Elements&lt;/code&gt;默认有该设置,可以启用即可。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/gongchunru/image/img/20200404110927.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/gongchunru/image/img/20200404112100.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tekezo/Karabiner-Elements/issues/8&#34;&gt;https://github.com/tekezo/Karabiner-Elements/issues/8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.v2ex.com/t/357071&#34;&gt;https://www.v2ex.com/t/357071&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+">macOS键盘按键设置</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://gongchunru.github.io/post/ji-suan-ji-ke-xue/"" data-c="
+          &lt;!--more--&gt;
+&lt;h2 id=&#34;1-网络&#34;&gt;1. 网络&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/downloads/chenshuo/documents/LearningNetworkProgramming.pdf&#34; target=&#34;_blank&#34;&gt;谈一谈网络编程学习经验&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;陈硕的教程: &lt;a href=&#34; http://boolan.com/course/4&#34; target=&#34;_blank&#34;&gt;网络编程实践&lt;/a&gt; , &lt;a href=&#34;http://chenshuo.com/pnp&#34; target=&#34;_blank&#34;&gt;课程主页&lt;/a&gt;  这门课程好像下架了，网上找了一份&lt;a href=&#34;https://pan.baidu.com/s/1RYL-fBQiJzHgJixFRa0p6w&#34;&gt;百度云盘&lt;/a&gt; 密码: a4zh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;unix网络编程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.masterraghu.com/subjects/np/introduction/unix_network_programming_v1.3/&#34; target=&#34;_blank&#34;&gt;unix_network_programming_v1.3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/DingHe/unpv13e&#34; target=&#34;_blank&#34;&gt; code &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;书籍：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.r-5.org/files/books/computers/internals/net/Richard_Stevens-TCP-IP_Illustrated-EN.pdf&#34;&gt;TCP/IP Illustrated, Volume 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;《计算机网络――自顶向下方法与Internet特色》&lt;br&gt;
+这套书有对应的教程：&lt;a href=&#34;http://list.youku.com/albumlist/show?id=17517962&amp;amp;amp;amp;amp;amp;amp;ascending=1&amp;amp;amp;amp;amp;amp;amp;page=1&#34;&gt;国立清华大学计算机网路概论(2009)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-计算机系统&#34;&gt;2. 计算机系统&lt;/h2&gt;
+&lt;h3 id=&#34;csapp&#34;&gt;CSAPP&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;书籍:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;英：&lt;a href=&#34;https://drive.google.com/open?id=0B1s2j_GQ6r2xQXdzWkp1UVlQT2s&#34; target=&#34;_blank&#34;&gt;Computer Systems - A Programmers Perspective&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;中：&lt;a href=&#34;https://drive.google.com/open?id=0B1s2j_GQ6r2xSXNVMkJRS0N2dTA&#34; target=&#34;_blank&#34;&gt;深入理解计算机系统（原书第三版3）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;国内视频:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.icourse163.org/learn/NJU-1001625001?tid=1002048008#/learn/announce&#34;&gt;计算机系统基础（一）：程序的表示、转换与链接&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.icourse163.org/course/NJU-1001964032&#34;&gt;计算机系统基础（二）：程序的执行和存储访问&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://drive.google.com/drive/folders/16ufo4O9F7Zo307MH41Q6GBvHlRdX6WJH?usp=sharing&#34;&gt;计算机系统基础-讲义&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上面的有上课时间的限制，可以去&lt;a href=&#34;https://www.bilibili.com/video/av14655093&#34;&gt;bilibili&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CMU课程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://csapp.cs.cmu.edu/3e/labs.html&#34;&gt;http://csapp.cs.cmu.edu/3e/labs.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cs.cmu.edu/afs/cs/academic/class/15213-s18/www/schedule.html&#34;&gt;http://www.cs.cmu.edu/afs/cs/academic/class/15213-s18/www/schedule.html&lt;/a&gt;  这里是对应的lab和code。不过这里的video还是15的。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=ynZWB0qPFGU&amp;amp;list=PL3swII2vlVoVspHvAYIvnbbqdV8oEuxkw&amp;amp;index=2&amp;amp;t=0s&#34;&gt;YouTube上15年秋的视频&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;笔记: &lt;a href=&#34;http://wdxtub.com/2016/04/16/thin-csapp-0/&#34;&gt;http://wdxtub.com/2016/04/16/thin-csapp-0/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;computer-architecture&#34;&gt;Computer Architecture&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;苏黎世联邦理工学院（ETH Zurich）Onur Mutlu教授最新的Computer Architecture系列教程：&lt;a href=&#34;http://t.cn/R8lukFn&#34;&gt;http://t.cn/R8lukFn&lt;/a&gt;  涵盖了计算机体系结构中的CPU、Cache、Memory、GPU等一系列内容，每个两小时的视频还都辅以了一个精心制作的PPT。软硬件结合是现在与未来高性能与系统软件的一个主旋律&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sicp&#34;&gt;SICP&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Lisp &lt;a href=&#34;http://www.math.pku.edu.cn/teachers/qiuzy/progtech/slides/index.php&#34;&gt;中文课件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;python语言教学 &lt;a href=&#34;https://cs61a.org/&#34;&gt;cs61a&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-算法&#34;&gt;3. 算法&lt;/h2&gt;
+&lt;h3 id=&#34;书籍&#34;&gt;书籍&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;《算法》&lt;/li&gt;
+&lt;li&gt;《算法导论》&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;课程&#34;&gt;课程&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MIT的一门有趣课程，6.S095 Programming for the Puzzled（教材与此同名），课程资源：http://t.cn/R85HDhn 主要讲解各种谜题的算法求解（比如螺母和螺栓、数独等等），还有Python源代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-其他&#34;&gt;4. 其他&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://agi.mit.edu/&#34;&gt;MIT通用人工智能&lt;/a&gt;&lt;/p&gt;
+">计算机科学</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://gongchunru.github.io/post/autoupdate-ti-shi-geng-xin-yi-zai-jin-xing-zhong-qing-shao-hou-zai-shi/"" data-c="
+          &lt;!-- more --&gt;
+&lt;p&gt;AutoUpdate提示：更新已在进行中。请稍后再试。&lt;br&gt;
+...&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/gongchunru/image/img/20200404121636.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;找到  &lt;code&gt;Microsoft Update Assistant&lt;/code&gt; 强制退出。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/gongchunru/image/img/%E6%B4%BB%E5%8A%A8%E7%9B%91%E8%A7%86%E5%99%A8%202019-11-15%20at%2015.36.17@2x.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/gongchunru/image/img/Microsoft%20AutoUpdate%202019-11-15%20at%2015.39.15@2x.png&#34; alt=&#34;xx&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">AutoUpdate提示：更新已在进行中。请稍后再试。</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" href="https://gongchunru.github.io/post/about/"" data-c="
+          &lt;p&gt;😊&lt;/p&gt;
+">关于</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<script>
+  // var escape = "[{&#34;content&#34;:&#34;&lt;!-- more --&gt;\n&lt;p&gt;首先要安装iterm2，然后就是各种折腾了。&lt;/p&gt;\n&lt;!--more--&gt;\n&lt;ol&gt;\n&lt;li&gt;\n&lt;p&gt;安装zsh&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;sh -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;quot;\n&lt;/code&gt;&lt;/pre&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;安装powerline&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;# 先安装pip指令\nsudo easy_install pip\n# 安装管道\npip install --user powerline-status\n&lt;/code&gt;&lt;/pre&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;安装powerline字体，为后面的ZSH主题作准备&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;# clone\ngit clone https://github.com/powerline/fonts.git --depth=1\n# install\ncd fonts\n./install.sh\n# clean-up a bit\ncd ..\nrm -rf fonts\n&lt;/code&gt;&lt;/pre&gt;\n&lt;figure data-type=\&#34;image\&#34; tabindex=\&#34;1\&#34;&gt;&lt;img src=\&#34;https://cdn.jsdelivr.net/gh/gongchunru/image/img/20200405112330.png\&#34; alt=\&#34;修改字体\&#34; loading=\&#34;lazy\&#34;&gt;&lt;/figure&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;安装和配置ZSH主题&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;# 1.下载主题\ngit clone https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor\n# 2.安装主题\ncd oh-my-zsh-agnoster-fcamblor\n./install\n# 3.修改配置文件\nvim .zshrc\n# TODO 修改如下内容\nZSH_THEME=&amp;quot;agnoster&amp;quot;\n# 修改完之后 使之生效\nsource .zshrc\n&lt;/code&gt;&lt;/pre&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;安装配色&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;git clone https://github.com/altercation/solarized\ncd solarized/iterm2-colors-solarized/\nopen .\n&lt;/code&gt;&lt;/pre&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;隐藏用户名和主机名&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;# 我的名字用户名和主机名是：gongchunru@gongchunrudeMBP\n# 修改 .zshrc文件\nvim .zshrc\n# 在文件内添加如下内容\nDEFAULT_USER=&amp;quot;gongchunru&amp;quot;\n# 记得以下\nsource .zshrc\n&lt;/code&gt;&lt;/pre&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;安装语法高亮插件 &lt;a href=\&#34;https://github.com/zsh-users/zsh-syntax-highlighting\&#34;&gt;zsh-syntax-highlighting&lt;/a&gt;&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;# 1. 下载安装插件\nbrew install zsh-syntax-highlighting\n# 2. 添加配置在 .zshrc\nsource /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh\n# 3. 使之生效\nsource .zshrc\n&lt;/code&gt;&lt;/pre&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;安装自动提示插件 &lt;a href=\&#34;https://github.com/zsh-users/zsh-autosuggestions\&#34;&gt;zsh-autosuggestions&lt;/a&gt;&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;# 1. 下载安装插件\nbrew install zsh-autosuggestions\n# 2. 添加配置 .zshrc\nsource /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh\n# 3. 使之生效\nsource .zshrc\n&lt;/code&gt;&lt;/pre&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;遇到的问题：&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;# 自动提示的代码颜色不对，看不到内容。\n# 修改文件 /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh\nZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&#39;fg=10&#39;\n&lt;/code&gt;&lt;/pre&gt;\n&lt;/li&gt;\n&lt;/ol&gt;\n&#34;,&#34;fileName&#34;:&#34;iterm-2-pei-zhi&#34;,&#34;abstract&#34;:&#34;&lt;!-- more --&gt;\n&lt;p&gt;首先要安装iterm2，然后就是各种折腾了。&lt;/p&gt;\n&#34;,&#34;title&#34;:&#34; iTerm 2配置&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2020-04-05 11:12:17&#34;,&#34;dateFormat&#34;:&#34;2020-04-05&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://gongchunru.github.io/post/iterm-2-pei-zhi/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;2 min read&#34;,&#34;time&#34;:100000,&#34;words&#34;:357,&#34;minutes&#34;:2},&#34;description&#34;:&#34;\n首先要安装iterm2，然后就是各种折腾了。\n\n\n\n安装zsh\nsh -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/maste...&#34;,&#34;toc&#34;:&#34;&#34;},{&#34;content&#34;:&#34;&lt;!-- more --&gt;\n&lt;p&gt;在&lt;code&gt;Google Cloud Platform&lt;/code&gt;创建的&lt;code&gt;VM&lt;/code&gt;实例只能通过【在浏览器窗口打开】。这里使用其他终端工具连接的设置。&lt;/p&gt;\n&lt;!-- more --&gt;\n&lt;h3 id=\&#34;1-在gcp网页端登录ssh\&#34;&gt;1. 在&lt;code&gt;GCP&lt;/code&gt;网页端登录&lt;code&gt;ssh&lt;/code&gt;&lt;/h3&gt;\n&lt;h3 id=\&#34;2-通过sudo-su命令切换到root用户\&#34;&gt;2. 通过&lt;code&gt;sudo su&lt;/code&gt;命令切换到&lt;code&gt;root&lt;/code&gt;用户&lt;/h3&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;sudo su //切换到root用户\n&lt;/code&gt;&lt;/pre&gt;\n&lt;h3 id=\&#34;3-修改ssh配置文件etcsshsshd_config\&#34;&gt;3. 修改SSH配置文件&lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;&lt;/h3&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;vi /etc/ssh/sshd_config //编辑文件\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;找到PermitRootLogin和Pa\tsswordAuthentication&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;# Authentication:\nLoginGraceTime 120\nPermitRootLogin yes //默认为no，需要开启root用户访问改为\nyesStrictModes yes \n\n# Change to no to disable tunnelled clear text passwords\nPasswordAuthentication yes //默认为no，改为yes开启密码登陆\n&lt;/code&gt;&lt;/pre&gt;\n&lt;h3 id=\&#34;4-重启ssh服务\&#34;&gt;4. 重启&lt;code&gt;SSH&lt;/code&gt;服务&lt;/h3&gt;\n&lt;p&gt;&lt;code&gt;Ubuntu&lt;/code&gt; &lt;code&gt;debian&lt;/code&gt;适用&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;/etc/init.d/ssh restart\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;&lt;code&gt;Centos 7&lt;/code&gt;适用:&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;systemctl restart sshd.service\n&lt;/code&gt;&lt;/pre&gt;\n&lt;h3 id=\&#34;5-进行以下操作可使用putty-iterm等客户端通过用户名和密码访问实例\&#34;&gt;5. 进行以下操作，可使用&lt;code&gt;putty&lt;/code&gt;、&lt;code&gt;iterm&lt;/code&gt;等客户端通过用户名和密码访问实例&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;p&gt;5.1 为现有用户设置一个密码，先查看当前登陆&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;who  //使用who查看当前登陆用户\nmapgun pts/0 2017-03-21 06:40\nroot pts/1 2017-03-21 07:00\n&lt;/code&gt;&lt;/pre&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;5.2 可以看到当前登陆了&lt;code&gt;mapgun&lt;/code&gt;和&lt;code&gt;root&lt;/code&gt;用户，修改指定用户密码即可&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;passwd mapgun //mapgun改为想要修改的用户名\n&lt;/code&gt;&lt;/pre&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;5.3 新增一个用户&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;useradd name  //新增用户\npasswd name  //设置用户密码\n&lt;/code&gt;&lt;/pre&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;5.4 设置&lt;code&gt;root&lt;/code&gt;密码&lt;/p&gt;\n&lt;p&gt;如果使用root密码登陆，需要设置root用户密码。&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-bash\&#34;&gt;passwd root\n&lt;/code&gt;&lt;/pre&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;,&#34;fileName&#34;:&#34;xiu-gai-gcp-yong-hu-mi-ma-bing-kai-qi-root-deng-lu&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;修改GCP用户密码并开启root登录&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2020-04-05 11:11:12&#34;,&#34;dateFormat&#34;:&#34;2020-04-05&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://gongchunru.github.io/post/xiu-gai-gcp-yong-hu-mi-ma-bing-kai-qi-root-deng-lu/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;2 min read&#34;,&#34;time&#34;:81000,&#34;words&#34;:320,&#34;minutes&#34;:2},&#34;description&#34;:&#34;\n在Google Cloud Platform创建的VM实例只能通过【在浏览器窗口打开】。这里使用其他终端工具连接的设置。\n\n1. 在GCP网页端登录ssh\n2. 通过sudo su命令切换到root用户\nsudo su //切换到root...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#1-%E5%9C%A8gcp%E7%BD%91%E9%A1%B5%E7%AB%AF%E7%99%BB%E5%BD%95ssh\&#34;&gt;1. 在&lt;code&gt;GCP&lt;/code&gt;网页端登录&lt;code&gt;ssh&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#2-%E9%80%9A%E8%BF%87sudo-su%E5%91%BD%E4%BB%A4%E5%88%87%E6%8D%A2%E5%88%B0root%E7%94%A8%E6%88%B7\&#34;&gt;2. 通过&lt;code&gt;sudo su&lt;/code&gt;命令切换到&lt;code&gt;root&lt;/code&gt;用户&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#3-%E4%BF%AE%E6%94%B9ssh%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6etcsshsshd_config\&#34;&gt;3. 修改SSH配置文件&lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#4-%E9%87%8D%E5%90%AFssh%E6%9C%8D%E5%8A%A1\&#34;&gt;4. 重启&lt;code&gt;SSH&lt;/code&gt;服务&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#5-%E8%BF%9B%E8%A1%8C%E4%BB%A5%E4%B8%8B%E6%93%8D%E4%BD%9C%E5%8F%AF%E4%BD%BF%E7%94%A8putty-iterm%E7%AD%89%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%80%9A%E8%BF%87%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E8%AE%BF%E9%97%AE%E5%AE%9E%E4%BE%8B\&#34;&gt;5. 进行以下操作，可使用&lt;code&gt;putty&lt;/code&gt;、&lt;code&gt;iterm&lt;/code&gt;等客户端通过用户名和密码访问实例&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;p&gt;简单记录一下现在电脑键盘的按键设置：软件是：&lt;a href=\&#34;https://github.com/tekezo/Karabiner-Elements\&#34;&gt;&lt;strong&gt;Karabiner-Elements&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;\n&lt;h3 id=\&#34;设置caps-lock按键\&#34;&gt;设置&lt;code&gt;CAPS LOCK&lt;/code&gt;按键&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;单独按下还是&lt;code&gt;CAPS LOCK&lt;/code&gt;键，&lt;code&gt;macOS&lt;/code&gt;下是切换中英文输入法。&lt;/li&gt;\n&lt;li&gt;作为组合键使用的时候，&lt;code&gt;CAPS LOCK&lt;/code&gt;作为&lt;code&gt;ctrl&lt;/code&gt;使用&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;配置如下（配置文件路径为&lt;code&gt;~/.config/karabiner/karabiner.json&lt;/code&gt;）：&lt;/p&gt;\n&lt;pre&gt;&lt;code class=\&#34;language-json\&#34;&gt;{\n    &amp;quot;manipulators&amp;quot;: [\n                            {\n                                &amp;quot;description&amp;quot;: &amp;quot;Change caps_lock to control when used as modifier, caps_lock when used alone&amp;quot;,\n                                &amp;quot;from&amp;quot;: {\n                                    &amp;quot;key_code&amp;quot;: &amp;quot;caps_lock&amp;quot;\n                                },\n                                &amp;quot;to&amp;quot;: [\n                                    {\n                                        &amp;quot;key_code&amp;quot;: &amp;quot;left_control&amp;quot;\n                                    }\n                                ],\n                                &amp;quot;to_if_alone&amp;quot;: [\n                                    {\n                                        &amp;quot;key_code&amp;quot;: &amp;quot;caps_lock&amp;quot;\n                                    }\n                                ],\n                                &amp;quot;type&amp;quot;: &amp;quot;basic&amp;quot;\n                            }\n                        ]\n}\n&lt;/code&gt;&lt;/pre&gt;\n&lt;h3 id=\&#34;设置hjkl为方向键\&#34;&gt;设置&lt;code&gt;hjkl&lt;/code&gt;为方向键&lt;/h3&gt;\n&lt;p&gt;​\t方向键现在配合&lt;code&gt;right_command&lt;/code&gt;按键使用，不过略感不足。此配置为&lt;code&gt;Karabiner-Elements&lt;/code&gt;默认有该设置,可以启用即可。&lt;/p&gt;\n&lt;figure data-type=\&#34;image\&#34; tabindex=\&#34;1\&#34;&gt;&lt;img src=\&#34;https://cdn.jsdelivr.net/gh/gongchunru/image/img/20200404110927.png\&#34; alt=\&#34;\&#34; loading=\&#34;lazy\&#34;&gt;&lt;/figure&gt;\n&lt;figure data-type=\&#34;image\&#34; tabindex=\&#34;2\&#34;&gt;&lt;img src=\&#34;https://cdn.jsdelivr.net/gh/gongchunru/image/img/20200404112100.png\&#34; alt=\&#34;\&#34; loading=\&#34;lazy\&#34;&gt;&lt;/figure&gt;\n&lt;h2 id=\&#34;参考\&#34;&gt;参考：&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;https://github.com/tekezo/Karabiner-Elements/issues/8\&#34;&gt;https://github.com/tekezo/Karabiner-Elements/issues/8&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;https://www.v2ex.com/t/357071\&#34;&gt;https://www.v2ex.com/t/357071&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&#34;,&#34;fileName&#34;:&#34;maco-jian-pan-an-jian-she-zhi&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;macOS键盘按键设置&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2020-04-05 11:10:02&#34;,&#34;dateFormat&#34;:&#34;2020-04-05&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://gongchunru.github.io/post/maco-jian-pan-an-jian-she-zhi/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;1 min read&#34;,&#34;time&#34;:52000,&#34;words&#34;:191,&#34;minutes&#34;:1},&#34;description&#34;:&#34;简单记录一下现在电脑键盘的按键设置：软件是：Karabiner-Elements\n设置CAPS LOCK按键\n\n单独按下还是CAPS LOCK键，macOS下是切换中英文输入法。\n作为组合键使用的时候，CAPS LOCK作为ctrl使用\n\n...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E8%AE%BE%E7%BD%AEcaps-lock%E6%8C%89%E9%94%AE\&#34;&gt;设置&lt;code&gt;CAPS LOCK&lt;/code&gt;按键&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E8%AE%BE%E7%BD%AEhjkl%E4%B8%BA%E6%96%B9%E5%90%91%E9%94%AE\&#34;&gt;设置&lt;code&gt;hjkl&lt;/code&gt;为方向键&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%8F%82%E8%80%83\&#34;&gt;参考：&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;!--more--&gt;\n&lt;h2 id=\&#34;1-网络\&#34;&gt;1. 网络&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;p&gt;&lt;a href=\&#34;https://github.com/downloads/chenshuo/documents/LearningNetworkProgramming.pdf\&#34; target=\&#34;_blank\&#34;&gt;谈一谈网络编程学习经验&lt;/a&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;陈硕的教程: &lt;a href=\&#34; http://boolan.com/course/4\&#34; target=\&#34;_blank\&#34;&gt;网络编程实践&lt;/a&gt; , &lt;a href=\&#34;http://chenshuo.com/pnp\&#34; target=\&#34;_blank\&#34;&gt;课程主页&lt;/a&gt;  这门课程好像下架了，网上找了一份&lt;a href=\&#34;https://pan.baidu.com/s/1RYL-fBQiJzHgJixFRa0p6w\&#34;&gt;百度云盘&lt;/a&gt; 密码: a4zh&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;unix网络编程&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;http://www.masterraghu.com/subjects/np/introduction/unix_network_programming_v1.3/\&#34; target=\&#34;_blank\&#34;&gt;unix_network_programming_v1.3&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;https://github.com/DingHe/unpv13e\&#34; target=\&#34;_blank\&#34;&gt; code &lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;书籍：&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;http://www.r-5.org/files/books/computers/internals/net/Richard_Stevens-TCP-IP_Illustrated-EN.pdf\&#34;&gt;TCP/IP Illustrated, Volume 1&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;《计算机网络――自顶向下方法与Internet特色》&lt;br&gt;\n这套书有对应的教程：&lt;a href=\&#34;http://list.youku.com/albumlist/show?id=17517962&amp;amp;amp;amp;amp;amp;amp;ascending=1&amp;amp;amp;amp;amp;amp;amp;page=1\&#34;&gt;国立清华大学计算机网路概论(2009)&lt;/a&gt;&lt;/p&gt;\n&lt;h2 id=\&#34;2-计算机系统\&#34;&gt;2. 计算机系统&lt;/h2&gt;\n&lt;h3 id=\&#34;csapp\&#34;&gt;CSAPP&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;p&gt;书籍:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;英：&lt;a href=\&#34;https://drive.google.com/open?id=0B1s2j_GQ6r2xQXdzWkp1UVlQT2s\&#34; target=\&#34;_blank\&#34;&gt;Computer Systems - A Programmers Perspective&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;中：&lt;a href=\&#34;https://drive.google.com/open?id=0B1s2j_GQ6r2xSXNVMkJRS0N2dTA\&#34; target=\&#34;_blank\&#34;&gt;深入理解计算机系统（原书第三版3）&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;国内视频:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;p&gt;&lt;a href=\&#34;http://www.icourse163.org/learn/NJU-1001625001?tid=1002048008#/learn/announce\&#34;&gt;计算机系统基础（一）：程序的表示、转换与链接&lt;/a&gt;&lt;/p&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;&lt;a href=\&#34;http://www.icourse163.org/course/NJU-1001964032\&#34;&gt;计算机系统基础（二）：程序的执行和存储访问&lt;/a&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;https://drive.google.com/drive/folders/16ufo4O9F7Zo307MH41Q6GBvHlRdX6WJH?usp=sharing\&#34;&gt;计算机系统基础-讲义&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;blockquote&gt;\n&lt;p&gt;上面的有上课时间的限制，可以去&lt;a href=\&#34;https://www.bilibili.com/video/av14655093\&#34;&gt;bilibili&lt;/a&gt;&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;CMU课程：&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;http://csapp.cs.cmu.edu/3e/labs.html\&#34;&gt;http://csapp.cs.cmu.edu/3e/labs.html&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;http://www.cs.cmu.edu/afs/cs/academic/class/15213-s18/www/schedule.html\&#34;&gt;http://www.cs.cmu.edu/afs/cs/academic/class/15213-s18/www/schedule.html&lt;/a&gt;  这里是对应的lab和code。不过这里的video还是15的。&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;https://www.youtube.com/watch?v=ynZWB0qPFGU&amp;amp;list=PL3swII2vlVoVspHvAYIvnbbqdV8oEuxkw&amp;amp;index=2&amp;amp;t=0s\&#34;&gt;YouTube上15年秋的视频&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;笔记: &lt;a href=\&#34;http://wdxtub.com/2016/04/16/thin-csapp-0/\&#34;&gt;http://wdxtub.com/2016/04/16/thin-csapp-0/&lt;/a&gt;&lt;/p&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3 id=\&#34;computer-architecture\&#34;&gt;Computer Architecture&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;苏黎世联邦理工学院（ETH Zurich）Onur Mutlu教授最新的Computer Architecture系列教程：&lt;a href=\&#34;http://t.cn/R8lukFn\&#34;&gt;http://t.cn/R8lukFn&lt;/a&gt;  涵盖了计算机体系结构中的CPU、Cache、Memory、GPU等一系列内容，每个两小时的视频还都辅以了一个精心制作的PPT。软硬件结合是现在与未来高性能与系统软件的一个主旋律&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3 id=\&#34;sicp\&#34;&gt;SICP&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Lisp &lt;a href=\&#34;http://www.math.pku.edu.cn/teachers/qiuzy/progtech/slides/index.php\&#34;&gt;中文课件&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;python语言教学 &lt;a href=\&#34;https://cs61a.org/\&#34;&gt;cs61a&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2 id=\&#34;3-算法\&#34;&gt;3. 算法&lt;/h2&gt;\n&lt;h3 id=\&#34;书籍\&#34;&gt;书籍&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;《算法》&lt;/li&gt;\n&lt;li&gt;《算法导论》&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3 id=\&#34;课程\&#34;&gt;课程&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;MIT的一门有趣课程，6.S095 Programming for the Puzzled（教材与此同名），课程资源：http://t.cn/R85HDhn 主要讲解各种谜题的算法求解（比如螺母和螺栓、数独等等），还有Python源代码。&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2 id=\&#34;4-其他\&#34;&gt;4. 其他&lt;/h2&gt;\n&lt;p&gt;&lt;a href=\&#34;https://agi.mit.edu/\&#34;&gt;MIT通用人工智能&lt;/a&gt;&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;ji-suan-ji-ke-xue&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;计算机科学&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2020-04-05 11:06:50&#34;,&#34;dateFormat&#34;:&#34;2020-04-05&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://gongchunru.github.io/post/ji-suan-ji-ke-xue/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;2 min read&#34;,&#34;time&#34;:105000,&#34;words&#34;:449,&#34;minutes&#34;:2},&#34;description&#34;:&#34;\n1. 网络\n\n\n谈一谈网络编程学习经验\n\n陈硕的教程: 网络编程实践 , 课程主页  这门课程好像下架了，网上找了一份百度云盘 密码: a4zh\n\n\n\nunix网络编程\n\nunix_network_programming_v1.3\n co...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#1-%E7%BD%91%E7%BB%9C\&#34;&gt;1. 网络&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F\&#34;&gt;2. 计算机系统&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#csapp\&#34;&gt;CSAPP&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#computer-architecture\&#34;&gt;Computer Architecture&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#sicp\&#34;&gt;SICP&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#3-%E7%AE%97%E6%B3%95\&#34;&gt;3. 算法&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E4%B9%A6%E7%B1%8D\&#34;&gt;书籍&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E8%AF%BE%E7%A8%8B\&#34;&gt;课程&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#4-%E5%85%B6%E4%BB%96\&#34;&gt;4. 其他&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;!-- more --&gt;\n&lt;p&gt;AutoUpdate提示：更新已在进行中。请稍后再试。&lt;br&gt;\n...&lt;/p&gt;\n&lt;!-- more --&gt;\n&lt;figure data-type=\&#34;image\&#34; tabindex=\&#34;1\&#34;&gt;&lt;img src=\&#34;https://cdn.jsdelivr.net/gh/gongchunru/image/img/20200404121636.png\&#34; alt=\&#34;\&#34; loading=\&#34;lazy\&#34;&gt;&lt;/figure&gt;\n&lt;p&gt;找到  &lt;code&gt;Microsoft Update Assistant&lt;/code&gt; 强制退出。&lt;/p&gt;\n&lt;figure data-type=\&#34;image\&#34; tabindex=\&#34;2\&#34;&gt;&lt;img src=\&#34;https://cdn.jsdelivr.net/gh/gongchunru/image/img/%E6%B4%BB%E5%8A%A8%E7%9B%91%E8%A7%86%E5%99%A8%202019-11-15%20at%2015.36.17@2x.png\&#34; alt=\&#34;\&#34; loading=\&#34;lazy\&#34;&gt;&lt;/figure&gt;\n&lt;figure data-type=\&#34;image\&#34; tabindex=\&#34;3\&#34;&gt;&lt;img src=\&#34;https://cdn.jsdelivr.net/gh/gongchunru/image/img/Microsoft%20AutoUpdate%202019-11-15%20at%2015.39.15@2x.png\&#34; alt=\&#34;xx\&#34; loading=\&#34;lazy\&#34;&gt;&lt;/figure&gt;\n&#34;,&#34;fileName&#34;:&#34;autoupdate-ti-shi-geng-xin-yi-zai-jin-xing-zhong-qing-shao-hou-zai-shi&#34;,&#34;abstract&#34;:&#34;&lt;!-- more --&gt;\n&lt;p&gt;AutoUpdate提示：更新已在进行中。请稍后再试。&lt;br&gt;\n...&lt;/p&gt;\n&#34;,&#34;title&#34;:&#34;AutoUpdate提示：更新已在进行中。请稍后再试。&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2020-04-05 10:50:40&#34;,&#34;dateFormat&#34;:&#34;2020-04-05&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://gongchunru.github.io/post/autoupdate-ti-shi-geng-xin-yi-zai-jin-xing-zhong-qing-shao-hou-zai-shi/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;1 min read&#34;,&#34;time&#34;:5000,&#34;words&#34;:24,&#34;minutes&#34;:1},&#34;description&#34;:&#34;\nAutoUpdate提示：更新已在进行中。请稍后再试。\n...\n\n\n找到  Microsoft Update Assistant 强制退出。\n\n\n...&#34;,&#34;toc&#34;:&#34;&#34;},{&#34;content&#34;:&#34;&lt;p&gt;😊&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;about&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;关于&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2019-01-25 19:09:48&#34;,&#34;dateFormat&#34;:&#34;2019-01-25&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://gongchunru.github.io/post/about/&#34;,&#34;hideInList&#34;:true,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;0 min read&#34;,&#34;time&#34;:0,&#34;words&#34;:0,&#34;minutes&#34;:0},&#34;description&#34;:&#34;😊\n&#34;,&#34;toc&#34;:&#34;&#34;}]";
+  // var json = escape.substr(1, escape.length - 2);
+  // var datas = json.split(',');
+  // for (let i=0; i < datas.length; i++) {
+  //   let item = datas[i];
+  //   let attrs = item.split('34;:&#34')
+  //   debugger
+  //   console.log(datas[i])
+  // }
+  let escapeMap = new Map();
+  escapeMap.set('&#34;', '"');
+  escapeMap.set('&gt;', '>');
+  escapeMap.set('&#39;', "'");
+  escapeMap.set('&lt;', '<');
+  escapeMap.set('&quot;', '"');
+  escapeMap.set('&amp;', '&');
+</script> -->
 
 
 </html>
