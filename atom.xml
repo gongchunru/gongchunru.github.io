@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gongchunru.github.io</id>
     <title>just for fun</title>
-    <updated>2020-12-15T16:49:40.734Z</updated>
+    <updated>2021-01-11T06:20:13.179Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gongchunru.github.io"/>
     <link rel="self" href="https://gongchunru.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://gongchunru.github.io/images/avatar.png</logo>
     <icon>https://gongchunru.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, just for fun</rights>
+    <rights>All rights reserved 2021, just for fun</rights>
     <entry>
         <title type="html"><![CDATA[ iTerm 2配置]]></title>
         <id>https://gongchunru.github.io/post/iterm-2-pei-zhi/</id>
@@ -103,12 +103,35 @@ source .zshrc
 </code></pre>
 </li>
 <li>
+<p>安装 <a href="https://github.com/athityakumar/colorls">Color LS</a></p>
+<pre><code class="language-bash"># 安装colorls 
+gem install colorls
+# 安装字体 
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+# 修改 .zshrc
+alias ls='colorls'
+alias ll='ls -la'
+alias la='ls -a'
+alias lt='ls --tree'
+# 配置字体
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/gongchunru/image/img/20210111141833.png" alt="" loading="lazy"><br>
+<img src="https://cdn.jsdelivr.net/gh/gongchunru/image/img/20210111141700.png" alt="" loading="lazy"></p>
+</li>
+<li>
 <p>遇到的问题：</p>
+</li>
+</ol>
 <pre><code class="language-bash"># 自动提示的代码颜色不对，看不到内容。
 # 修改文件 /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 </code></pre>
-</li>
+<h3 id="参考">参考</h3>
+<ol>
+<li>https://github.com/wangshub/dotfile/blob/master/.zshrc</li>
+<li>https://github.com/ryanoasis/nerd-fonts/blob/master/readme.md#option-3-install-script</li>
+<li>https://github.com/athityakumar/colorls</li>
 </ol>
 ]]></content>
     </entry>
