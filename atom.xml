@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gongchunru.github.io</id>
     <title>just for fun</title>
-    <updated>2021-01-11T07:11:56.453Z</updated>
+    <updated>2021-01-14T02:00:38.907Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gongchunru.github.io"/>
     <link rel="self" href="https://gongchunru.github.io/atom.xml"/>
@@ -146,6 +146,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 <li>https://github.com/wangshub/dotfile/blob/master/.zshrc</li>
 <li>https://github.com/ryanoasis/nerd-fonts/blob/master/readme.md#option-3-install-script</li>
 <li>https://github.com/athityakumar/colorls</li>
+<li>gongchunru.github.io 原创</li>
 </ol>
 ]]></content>
     </entry>
