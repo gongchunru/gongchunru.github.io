@@ -100,9 +100,9 @@ comments:
   # Giscus options › https://giscus.app
   giscus:
     repo: gongchunru/gongchunru.github.io  # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
+    repo_id: 132295856
+    category: Announcements
+    category_id: 33902957
     mapping:          # optional, default to 'pathname'
     input_position:   # optional, default to 'bottom'
     lang:             # optional, default to the value of `site.lang`
