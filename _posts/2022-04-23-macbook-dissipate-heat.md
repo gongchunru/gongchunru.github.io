@@ -12,8 +12,6 @@ modify_date: 2022-04-23 11:53:21
 
 
 
-#macOS 
-
 老款有touch bar的 Intel MacBook Pro ，普遍存在严重的散热问题，使用过程中不止机身很烫，而且动不动电脑就会卡顿。卡顿是由于机器 CPU、GPU 等温度过高，系统降频保护功能，降频后的电脑 就会变的卡顿，十分影响工作效率、娱乐心情。我这里要解决的就是降频问题。
 
 如果想要组织降频就需要防止温度过高，就是把温度传递出去。一个就是机器自带的散热风扇，时间久了就需要清理下灰尘；另一个就是想办法把温度通过固体传导出去，这里就需要用到散热贴了。
@@ -53,5 +51,6 @@ modify_date: 2022-04-23 11:53:21
 * 动手能力强的可以更换一下硅脂，效果更好一些。
 
 ## 资料：
-1. https://www.bilibili.com/video/BV1yA411i7c8?share_source=copy_web
-2. https://zh.ifixit.com/Device/MacBook_Pro_15%22_Touch_Bar_2018
+1. [https://www.bilibili.com/video/BV1yA411i7c8?share_source=copy_web](https://www.bilibili.com/video/BV1yA411i7c8?share_source=copy_web)
+2. [https://zh.ifixit.com/Device/MacBook_Pro_15%22_Touch_Bar_2018](https://zh.ifixit.com/Device/MacBook_Pro_15%22_Touch_Bar_2018)
+
