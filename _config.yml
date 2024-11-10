@@ -109,7 +109,7 @@ toc: true
 
 comments:
   provider:  giscus       # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  provider: # [disqus | utterances | giscus]
+  # provider: # [disqus | utterances | giscus]
   # The provider options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
