@@ -28,10 +28,10 @@ modify_date: 2022-04-23 11:53:21
 
 ## 清理灰尘
 打开后就震惊了，很脏。
-<img src="https://cdn.jsdelivr.net/gh/gongchunru/image/img/202204241308480.jpg" style="zoom:80%;" />
+<img src="https://cdn.jsdelivr.net/gh/gongchunru/image/img/202204241308480.jpg"  alt="清理前的MacBook内部"  style="zoom:80%;" />
 
 这里用到了镊子、吹尘球、湿巾试着简单清理。用湿巾小心电路。如果有吸尘器更好。
-<img src="https://cdn.jsdelivr.net/gh/gongchunru/image/img/202204241309759.jpg" style="zoom:80%;" />
+<img src="https://cdn.jsdelivr.net/gh/gongchunru/image/img/202204241309759.jpg"  alt="清理用的吹尘球"  style="zoom:80%;" />
 清理后的样子
 
 <img src="https://cdn.jsdelivr.net/gh/gongchunru/image/img/IMG_5372.jpg" alt="IMG_5372" style="zoom:80%;" />
