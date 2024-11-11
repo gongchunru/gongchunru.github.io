@@ -4,8 +4,8 @@ title:  macOS 上利用 Keyboard Maestro 开启图片自动压缩
 tags: [macOS,Zipic]
 category: [tools]
 comments: true
-date: 2023-12-24
-modify_date: 2023-12-24 12:45:17
+date: 2024-11-11
+modify_date: 2024-11-11 15:27:48
 ---
 
 
