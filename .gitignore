@@ -26,11 +26,20 @@ Thumbs.db
 # 日志文件
 *.log
 
+# NPM dependencies
+node_modules
+package-lock.json
 # 临时文件
 tmp/
 .tmp/
 *.tmp
 
+# IDE configurations
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
 # 本地配置文件
 .env
 .env.local
