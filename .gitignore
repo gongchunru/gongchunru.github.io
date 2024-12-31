@@ -45,5 +45,5 @@ tmp/
 .env.local
 .env.*.local
 
-# Node 模块 (如果使用)
-node_modules/
+# Misc
+.DS_Store
