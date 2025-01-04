@@ -1,7 +1,10 @@
 ---
+layout: post
 title: 使用 Cursor 高效翻译文章的实践分享
+comments: true
 author: gchr
 date: 2025-01-04 10:00:00 +0800
+modify_date: 2025-01-04 10:00:00 +0800
 categories: [Tools, AI]
 tags: [cursor, translation, ai, tools]
 ---
