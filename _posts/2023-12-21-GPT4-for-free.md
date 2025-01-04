@@ -6,6 +6,7 @@ category: [tools]
 comments: true
 date: 2023-12-21
 modify_date: 2023-12-21 22:33:05
+author: gchr
 ---
 
 虽然大模型层出不穷，但是目前全网最强的模型还是要属GPT-4。但是由于 GPT-4 付款不易，而且价格昂贵，这个把我搜集的几个免费用 GPT-4 的网站分享出来。

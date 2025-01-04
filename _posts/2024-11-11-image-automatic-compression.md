@@ -6,9 +6,8 @@ category: [tools]
 comments: true
 date: 2024-11-11
 modify_date: 2024-11-11 15:27:48
+author: gchr
 ---
-
-
 
 每次手动的截图都很大，为了节省流量和加载速度最好对图片做一次压缩，这里需要用到的是一个压缩软件 `Zipic` 。当然还用到了其他软件 `Keyboard Maestro (付费)` ，`PicGo（免费）`
 
