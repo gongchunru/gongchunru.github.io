@@ -4,7 +4,6 @@ author: gchr
 date: 2025-01-04 15:38:07
 categories: [工具]
 tags: [emby, 媒体服务器]
-pin: false
 ---
 
 我最近发现了一个好用的 APP [Reflix](https://apps.apple.com/cn/app/reflix/id6621243955)，这个可以同时显示多个 ``Emby Server`` 的同一个资源，并且可以显示文件大小，这样就可以选择质量更高的资源来观看。
