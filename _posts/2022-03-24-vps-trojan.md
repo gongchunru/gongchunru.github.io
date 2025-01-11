@@ -6,7 +6,6 @@ category: [tips]
 comments: true
 date: 2022-03-04
 modify_date: 2022-03-04 16:30:00 +08:00
-author: gchr
 ---
 
 > 用的网上的一键脚本，这里会简单记录一下遇到的问题。

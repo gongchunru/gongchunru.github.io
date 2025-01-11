@@ -2,7 +2,6 @@
 layout: post
 title: 我在使用的 Emby 媒体服务器
 comments: true
-author: gchr
 date: 2025-01-04 15:38:07 +0800
 categories: [Tools]
 tags: [emby]

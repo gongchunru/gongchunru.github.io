@@ -2,7 +2,6 @@
 layout: post
 title: "Claw.cloud 7美元/年 VPS主机"
 comments: true
-author: gchr
 date: 2025-01-12
 categories: [VPS, 主机评测]
 tags: [VPS, 主机评测, Claw.cloud]

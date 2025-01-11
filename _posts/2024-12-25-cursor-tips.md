@@ -6,7 +6,6 @@ category: 开发工具
 status: published
 created: 2024-12-25
 description: "Cursor IDE的实用技巧总结，包括可视化、上下文管理和多聊天窗口共享等功能"
-author: gchr
 ---
 
 # Cursor 特别的使用技巧和遇到的问题
