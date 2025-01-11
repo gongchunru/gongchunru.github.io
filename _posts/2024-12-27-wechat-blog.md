@@ -7,7 +7,22 @@ comments: true
 date: 2024-12-27
 modify_date: 2024-12-27 10:00:00
 author: gchr
+mermaid: true
 ---
+```mermaid
+mindmap
+  root((文章概览 - Updated))
+    解决痛点
+      公众号排版不便
+    推荐编辑器
+      Markdown.com.cn
+      Doocs
+      MDnice
+      Quail.ink
+    效果
+      提升写作效率
+      一键生成公众号格式
+```
 
 ## 前言
 
@@ -16,7 +31,7 @@ author: gchr
 ## 推荐编辑器
 
 ### 1. Markdown 在线编辑器
-- 网址: https://markdown.com.cn/editor/
+- 网址: [https://markdown.com.cn/editor/](https://markdown.com.cn/editor/)
 - 特点:
   - 完全免费
   - 提供多种主题选择
@@ -24,8 +39,8 @@ author: gchr
   - 界面简洁清爽
   - 无需登录即可使用
 
-### 2. Doocs Markdown 编辑器  
-- 网址: https://doocs.github.io/md/
+### 2. Doocs Markdown 编辑器
+- 网址: [https://doocs.github.io/md/](https://doocs.github.io/md/)
 - 特点:
   - 开源项目,可本地部署
   - 支持自定义主题
@@ -35,8 +50,8 @@ author: gchr
   - 提供多种代码高亮主题
 
 ### 3. MDnice
-- 网址: https://www.mdnice.com/
-- 特点: 
+- 网址: [https://www.mdnice.com/](https://www.mdnice.com/)
+- 特点:
   - 提供丰富的主题模板
   - 支持自定义CSS
   - 文章可在线保存
@@ -44,7 +59,7 @@ author: gchr
   - 需要登录使用
 
 ### 4. Quail.ink Markdown 编辑器
-- 网址: https://quail.ink/tools/markdown-to-wx/
+- 网址: [https://quail.ink/tools/markdown-to-wx/](https://quail.ink/tools/markdown-to-wx/)
 - 特点:
   - 完全免费，无需登录
   - 实时预览效果
