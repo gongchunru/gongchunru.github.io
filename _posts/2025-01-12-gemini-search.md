@@ -3,9 +3,9 @@ layout: post
 title: "Gemini 搜索"
 comments: true
 date: 2025-01-12
-categories: [Gemini, 人工智能]
-tags: [Gemini, 人工智能]
-image: https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250112002019909.png
+categories: [AI]
+tags: [Gemini]
+image: https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250112230345643.png
 ---
 
 # Gemini 搜索
