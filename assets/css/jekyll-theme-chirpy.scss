@@ -8,3 +8,24 @@
 ';
 
 /* append your custom style below */
+@import 'main';
+
+/* 引入 LXGW WenKai 字体 */
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css');
+
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css');
+
+/* 自定义字体设置 */
+body {
+  font-family: "LXGW WenKai Lite", sans-serif;
+}
+
+/* 设置标题字体 */
+#search-results a, h5, h4, h3, h2, h1 {
+  font-family: "LXGW WenKai", sans-serif;
+}
+
+/* 设置代码字体 */
+pre, code, kbd, samp {
+  font-family: "LXGW WenKai Mono", monospace;
+}

@@ -77,6 +77,10 @@ image: https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250112002019909.png
 =======================================
 ```
 
+## 线路测试
+
+![CleanShot 2025-01-12 at 20.50.36@2x.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250112205155500.png)
+
 
 ## 延迟测试
 
