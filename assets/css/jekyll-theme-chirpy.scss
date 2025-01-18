@@ -15,14 +15,80 @@
 
 @import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css');
 
+
+
+@import url('https://chinese-fonts-cdn.deno.dev/packages/dyh/dist/SmileySans-Oblique/result.css');
+
+// body {font-family:'Smiley Sans Oblique';font-weight:'400'};
+
 /* 自定义字体设置 */
 body {
-  font-family: "LXGW WenKai Lite", sans-serif;
+  font-family: "LXGW WenKai Lite", "Smiley Sans Oblique", sans-serif;
 }
 
 /* 设置标题字体 */
-#search-results a, h5, h4, h3, h2, h1 {
-  font-family: "LXGW WenKai", sans-serif;
+#search-results a, h5, h4, h3, h2, h1, .panel-heading, h2.panel-heading {
+  font-family: "Smiley Sans Oblique", sans-serif !important;
+}
+
+/* 设置最近更新区域的字体 */
+#access-lastmod {
+  .panel-heading {
+    font-family: "Smiley Sans Oblique", sans-serif;
+  }
+  
+  li a {
+    font-family: "Smiley Sans Oblique", sans-serif;
+  }
+}
+
+/* 设置标签区域的字体 */
+.post-tag {
+  font-family: "Smiley Sans Oblique", sans-serif;
+  font-size: 0.85rem;
+  &:hover {
+    font-family: "Smiley Sans Oblique", sans-serif;
+  }
+}
+
+/* 设置侧边栏字体 */
+#sidebar {
+  .site-title {
+    font-family: "Smiley Sans Oblique", sans-serif;
+  }
+  
+  .site-subtitle {
+    font-family: "Smiley Sans Oblique", sans-serif;
+  }
+
+  .nav-link {
+    font-family: "Smiley Sans Oblique", sans-serif;
+    span {
+      font-family: "Smiley Sans Oblique", sans-serif;
+    }
+  }
+}
+
+/* 设置文章目录字体 */
+#toc-wrapper {
+  .panel-heading {
+    font-family: "Smiley Sans Oblique", sans-serif;
+  }
+
+  #toc {
+    .toc-link {
+      font-family: "Smiley Sans Oblique", sans-serif;
+    }
+  }
+}
+
+/* 设置文章导航字体 */
+.post-navigation {
+  .btn {
+    p {
+      font-family: "Smiley Sans Oblique", sans-serif !important;
+    }
+  }
 }
 
 /* 设置代码字体 */
