@@ -25,7 +25,7 @@ Google 开发者博客有篇文章：[Gemini API 和 Google AI Studio 新增了�
 ![AI Studio](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250112112218948.png)
 
 
-# 主要测试逻辑
+## 主要测试逻辑
 
 用主流的 AI 联网搜索来测试下同一个Prompt ，看看联网搜索的效果，我会把这些效果全部复制到一个 MD 文件中，然后给各个 AI 让它给出一个评分，最后我会把各个 AI 的评分结果汇总到一张表中，然后给出一个平均得分，可以直接到最后看评分。
 
@@ -40,7 +40,7 @@ Gemini Search （Grounding with Google Search）比其他 AI 搜索来说 有什
 ![CleanShot 2025-01-12 at 10.21.45@2x.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250112113318349.png)
 
 
-# AI 评分
+## AI 评分
 
 ![CleanShot 2025-01-12 at 11.35.42@2x.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250112113931227.png)
 
@@ -51,7 +51,7 @@ Gemini Search （Grounding with Google Search）比其他 AI 搜索来说 有什
 
 
 
-# AI模型互评得分表
+## AI模型互评得分表
 
 下表展示了各AI模型对其他模型搜索回复质量的评分（满分10分）：
 
@@ -73,7 +73,7 @@ Gemini Search （Grounding with Google Search）比其他 AI 搜索来说 有什
 5. ChatGPT 7.50
 6. Claude 7.17
 
-# 主要特点
+## 主要特点
 - 事实搜索提供更准确、更新鲜的信息
 - 减少 AI 应用中的幻觉现象
 - 匹配信息源，增强应用的可靠程度
@@ -82,7 +82,7 @@ Gemini Search （Grounding with Google Search）比其他 AI 搜索来说 有什
 - 支持 Gemini 1.5，Gemini 2.0
 
 
-# 成本
+## 成本
 - Google AI Studio 免费测试
 - API 使用需付费，$35 / 1000 次查询，不便宜
 

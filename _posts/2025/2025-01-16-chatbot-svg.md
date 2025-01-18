@@ -16,28 +16,28 @@ image:
 
 我这里都会给大模型附加上英伟达的财报文件，以及一个提示词，来展示 ChatBot 的 SVG 展示能力。有些不能给 PDF 文件，比如 `Cursor`，我会全量复制贴进去。
 
-# Monica
+## Monica
 先是我用的最多的 `Monica` ，效果还行，但是不够好。
 
 ![Monica](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250116171754897.png)
 
-# DeepSeek
+## DeepSeek
 
 这是最近很火的 Deepseek [官网](https://chat.deepseek.com/) ，效果不理想。
 ![Deepseek-V3](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250116171810069.png)
 
-# 集成 API 的 ChatBot
+## 集成 API 的 ChatBot
 最近刚开始用的 `Cherry-Studio` ，搭配 `DeepSeek-V3` ，效果也不太理想。
 
 ![Cherry-Studio](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250116171920121.png)
 
-# Claude 
+## Claude 
 最后使用 `Claude` 官网，效果很不错 👍
 
 ![Claude官网](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250116171926386.png)
 
 既然官网用的模型也是 `Claude-3.5-sonnet`， 干脆用 `Cursor` 试试。
-# Cursor 
+## Cursor 
 
 我把 上面的内容全部输入 `Cursor Composer`，最后发现效果也不错。
 

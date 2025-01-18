@@ -11,7 +11,7 @@ image: https://cdn.jsdelivr.net/gh/gongchunru/image/img/20241228133608267.png
 
 之前介绍过 `Obsidian` 的一个 图床插件文章 ，这次介绍下 `Cursor` 和 `Obsidian` 配置使用的问题。可以翻到最后看结论。
 
-# Cursor 中编辑
+## Cursor 中编辑
 
 最近使用 `Cursor` 后，在任何地方写文字都会感觉很慢，需要一个自动补全功能。这可能也是 AI 带来的问题，变得比较追求 “高效”。
 
@@ -22,10 +22,10 @@ image: https://cdn.jsdelivr.net/gh/gongchunru/image/img/20241228133608267.png
 ![生成元数据](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20241227235159879.png)
 
 
-### 遇到的问题
+## 遇到的问题
 这里的一个问题就是上传图片到图床的时候，还是需要在 `Obsidian` 中粘贴图片，这样更加方便的自动上传，具体可以参考另一篇文章：
 
-# obsidian-smart-composer
+## obsidian-smart-composer
 不过 `Obsidian` 最近上面有了一款插件 完全就是 `Cursor` 版本的 `Obsidian` ，上面有了 `Cursor` 的核心功能 `Composer` ，名字就叫 `obsidian-smart-composer`
 
 ```
@@ -58,7 +58,7 @@ https://github.com/glowingjade/obsidian-smart-composer
 * 插件和 `Canvas Mindmap` 冲突，如果安装了 `Canvas Mindmap` 就不能 Apply
 * 没有 `Cursor` 那么智能，还是依赖于大模型的能力
 
-# 剪藏插件
+## 剪藏插件
 这里再介绍个好玩的。
 `Obsidian` 官方出了一个浏览器剪藏插件 可以直接剪藏到 `Obsidian` 并转换为 `Markdown` 格式，并且可以配置 AI 总结能力
 
@@ -71,7 +71,7 @@ https://github.com/glowingjade/obsidian-smart-composer
 
 ![ 剪藏 ](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20241228004023536.png)
 
-# 结论
+## 结论
  `Obsidian` 插件丰富更适合有复杂的编辑，比如图片超链接各种自动化的插件。
  `Cursor` 更适合外部资料搜寻、AI 整理资料，文章编辑的续写补全，还有最后的润色和纠错。
  可以两个软件同时打开一起用或者看个人侧重。
