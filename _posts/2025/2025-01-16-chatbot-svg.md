@@ -19,32 +19,32 @@ image:
 ## Monica
 先是我用的最多的 `Monica` ，效果还行，但是不够好。
 
-![Monica](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250116171754897.png)
+![Monica](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250116171754897.png){: .d-flex .justify-content-center .w-75}
 
 ## DeepSeek
 
 这是最近很火的 Deepseek [官网](https://chat.deepseek.com/) ，效果不理想。
-![Deepseek-V3](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250116171810069.png)
+![Deepseek-V3](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250116171810069.png){: .d-flex .justify-content-center .w-75}
 
 ## 集成 API 的 ChatBot
 最近刚开始用的 `Cherry-Studio` ，搭配 `DeepSeek-V3` ，效果也不太理想。
 
-![Cherry-Studio](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250116171920121.png)
+![Cherry-Studio](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250116171920121.png){: .d-flex .justify-content-center .w-75}
 
 ## Claude 
 最后使用 `Claude` 官网，效果很不错 👍
 
-![Claude官网](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250116171926386.png)
+![Claude官网](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250116171926386.png){: .d-flex .justify-content-center .w-75}
 
 既然官网用的模型也是 `Claude-3.5-sonnet`， 干脆用 `Cursor` 试试。
 ## Cursor 
 
 我把 上面的内容全部输入 `Cursor Composer`，最后发现效果也不错。
 
-![CleanShot 2025-01-17 at 00.59.17@2x.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117011720311.png)
+![CleanShot 2025-01-17 at 00.59.17@2x.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117011720311.png){: .d-flex .justify-content-center .w-75}
 
 `Cursor` 安装 SVG 插件可以直接预览以及导出 PNG 图片格式。
-![CleanShot 2025-01-17 at 01.27.55@2x.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117012835344.png)
+![CleanShot 2025-01-17 at 01.27.55@2x.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117012835344.png){: .d-flex .justify-content-center .w-75}
 
 ## 批量生成
 
@@ -54,18 +54,23 @@ image:
 文件内是英伟达的财报，请基于帮我生成 10 个 SVG 文件，用于国内外社交媒体风格。
 ```
 
-![dy风格](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117012047236.png)
+![dy风格](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117012047236.png){: .d-flex .justify-content-center .w-75}
 
 
 
-![bilibili](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117012139328.png)
+![bilibili](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117012139328.png){: .d-flex .justify-content-center .w-75}
+_bilibili 风格_
 
 
 
-![instagram](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117012205477.png)
+![instagram](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117012205477.png){: .d-flex .justify-content-center .w-75}
+_instagram 风格_
 
-![nvidia_instagram.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117012449177.png)
-![nvidia_bilibili.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117012504448.png)
+![nvidia_instagram.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117012449177.png){: .d-flex .justify-content-center .w-75}
+_instagram 风格_
+
+![nvidia_bilibili.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250117012504448.png){: .d-flex .justify-content-center .w-75}
+_bilibili 风格_
 
 最后附上前面测试的提示词，这个提示词是基于李继刚老师的汉语新解修改而来的，表示感谢。
 
