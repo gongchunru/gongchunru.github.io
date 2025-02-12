@@ -94,3 +94,6 @@ image: https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250112002019909.png
 
 ![CleanShot 2025-01-12 at 00.23.01@2x.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250112002348451.png)
 
+## 总结
+
+这篇文章介绍了 Claw.cloud 的 7 美元/年 VPS 主机。文章详细描述了产品配置，包括 1 vCPU、1 GiB 内存、20 GiB 存储空间、200 Mbps 带宽和 500 GB 月流量。作者还进行了多项测试，包括解锁情况、线路测试、延迟测试和油管速度测试。总体来说，这款 VPS 主机在首年价格非常优惠，但第二年价格较高，不太适合续费。
