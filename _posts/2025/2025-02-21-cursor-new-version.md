@@ -44,14 +44,18 @@ Model deepseek-r1 doesn't have good agent support yet. Start a new thread using 
 ## Chat 里面的 @ 功能
 
 `@Files` 和 `@Folders` 合并为 `@Files & Folders` 一个指令
-增加 `@Code` 指令
+![CleanShot 2025-02-22 at 02.57.24@2x.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250222032147627.png){: .d-flex .justify-content-center .w-50}
+
 之前介绍的 `@/` 可以呼出文件筛选，但是这个版本这里失效了，不知是 feature 还是 bug。
+![](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250224004050791.png){: .d-flex .justify-content-center .w-50}
 
 输入 `/` 这里多了个 `Disable Iterate on Lints` / `Enable Iterate on Lints` 选项，可以快速选择开或者关。这里的操作对应在设置 Features 里面 `Iterate on Lints` 选项。
+![](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250224003725994.png){: .d-flex .justify-content-center .w-50}
 
 在这里你可以 `@Terminal`，把终端中的上下文直接带入大模型中。
 
-![CleanShot 2025-02-22 at 02.57.24@2x.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250222032147627.png){: .d-flex .justify-content-center .w-50}
+
+
 
 ## Cmd/Ctrl + K 快捷键
 
