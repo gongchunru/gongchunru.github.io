@@ -41,3 +41,4 @@ _Coze 的效果_
 最后尝试了 klingai，一步就达到了想要的效果。还是中国的 AI 最懂中国文化。
 ![klingai](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250119023223381.png)
 
+![image.png](https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250207144156364.png)
