@@ -9,6 +9,8 @@ published: true
 image: https://cdn.jsdelivr.net/gh/gongchunru/image/img/20250222025247947.png
 ---
 
+
+[Cursor 新版本 0.46 版本速览 \| Gchr](https://068666.xyz/2025/cursor-new-version/)
 # Cursor 新版本速览
 
 我提前体验了 0.46 版本，不到一天的时间。更多变动可能没注意到，或者和最终的版本还有差别，难免有遗漏和错误的地方。

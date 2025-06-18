@@ -48,3 +48,11 @@ tmp/
 # Misc
 .DS_Store
 .cursorrules
+
+.cursor/
+.specstory/
+.aider.tags.cache.v3/
+.windsurfrules
+.process.md
+.aider.chat.history.md
+.aider.input.history

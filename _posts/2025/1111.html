@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Particle Simulation in a Cylindrical Container</title>
+    <!-- Include the p5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Global variables
+      let particles = [];
+      const numParticles = 25;
+      // Container parameters
+      const cylinderRadius = 200;
+      const cylinderHeight = 400;
+      // The external sphere will fully enclose the cylinder.
+      // A good choice is a bit larger than the half‐diagonal of the cylinder.
+      const sphereRadius = 350;
+      
+      function setup() {
+        // Create a full-window canvas in WEBGL mode.
+        createCanvas(windowWidth, windowHeight, WEBGL);
+        // Draw an initial black background.
+        background(0);
+        // Create our particles.
+        for (let i = 0; i < numParticles; i++) {
+          particles.push(new Particle());
+        }
+        // Use smooth drawing.
+        smooth();
+      }
+      
+      function draw() {
+        // =========================
+        // Create the trail effect
+        // =========================
+        // Instead of using background(), we draw a translucent
+        // rectangle over the entire canvas each frame.
+        push();
+          // reset matrix so that the overlay covers the entire canvas
+          resetMatrix();
+          noStroke();
+          fill(0, 20); // low alpha value so previous drawings slowly fade
+          // Draw from the top‐left (0,0) in 2D (the canvas is in WEBGL but we can reset the matrix)
+          rectMode(CORNER);
+          rect(0, 0, width, height);
+        pop();
+        
+        // =========================
+        // Set up the 3D scene
+        // =========================
+        push();
+          // Compute a slowly oscillating zoom factor (scale)
+          let zoom = map(sin(frameCount * 0.005), -1, 1, 0.8, 1.2);
+          scale(zoom);
+          // Apply a slow rotation about the Y‐axis so you can see all sides.
+          rotateY(frameCount * 0.005);
+        
+          // ---------------------------------------
+          // Draw the external spherical container
+          // ---------------------------------------
+          push();
+            noFill();
+            stroke(255, 100);
+            strokeWeight(2);
+            // Draw a transparent sphere that encloses everything.
+            sphere(sphereRadius);
+          pop();
+          
+          // ---------------------------------------
+          // Draw the internal cylindrical container
+          // ---------------------------------------
+          push();
+            noFill();
+            stroke(255, 100);
+            strokeWeight(2);
+            // p5.js’s cylinder() is drawn centered at (0,0,0) with its
+            // long (height) dimension along the y–axis.
+            cylinder(cylinderRadius, cylinderHeight);
+          pop();
+          
+          // -----------------------------
+          // Update and draw the particles
+          // -----------------------------
+          for (let p of particles) {
+            p.update();
+            p.display();
+          }
+        pop();
+      }
+      
+      // Adjust canvas size when the window is resized.
+      function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+      }
+      
+      // ========================================================
+      // Particle class – each particle is a colored sphere.
+      // It moves with constant velocity except when bouncing
+      // off the cylindrical boundaries.
+      // ========================================================
+      class Particle {
+        constructor() {
+          // Give the particle a random radius between 4 and 8.
+          this.radius = random(4, 8);
+          // Generate a random initial position inside the cylinder.
+          // For the x and z coordinates, choose a random point within a circle
+          // of radius (cylinderRadius - this.radius) to ensure it starts inside.
+          let angle = random(TWO_PI);
+          let r = random(0, cylinderRadius - this.radius);
+          let x = r * cos(angle);
+          let z = r * sin(angle);
+          // For y, choose a random value within the top and bottom limits.
+          let y = random(-cylinderHeight / 2 + this.radius, cylinderHeight / 2 - this.radius);
+          this.pos = createVector(x, y, z);
+          
+          // Give the particle a random 3D velocity.
+          // We choose a random direction (spherical coordinates) and a speed between 1 and 3.
+          let speed = random(1, 3);
+          let theta = random(TWO_PI);
+          let phi = random(0, PI);
+          this.vel = createVector(
+            speed * sin(phi) * cos(theta),
+            speed * cos(phi),
+            speed * sin(phi) * sin(theta)
+          );
+          
+          // Choose a random bright color for the particle.
+          this.col = color(random(50, 255), random(50, 255), random(50, 255));
+        }
+        
+        update() {
+          // Update the particle’s position.
+          this.pos.add(this.vel);
+          
+          // ========================================================
+          // Bounce off the cylindrical side walls.
+          // ========================================================
+          // Compute the distance from the y–axis in the xz–plane.
+          let radialDist = sqrt(this.pos.x * this.pos.x + this.pos.z * this.pos.z);
+          if (radialDist > (cylinderRadius - this.radius)) {
+            // Compute the outward normal in the xz–plane.
+            let normal = createVector(this.pos.x, 0, this.pos.z).normalize();
+            // Snap the particle back onto the cylinder wall.
+            this.pos.x = normal.x * (cylinderRadius - this.radius);
+            this.pos.z = normal.z * (cylinderRadius - this.radius);
+            // Reflect the x and z components of the velocity.
+            let dot = this.vel.x * normal.x + this.vel.z * normal.z;
+            // Only reflect if the particle is moving outwards.
+            if (dot > 0) {
+              this.vel.x -= 2 * dot * normal.x;
+              this.vel.z -= 2 * dot * normal.z;
+            }
+          }
+          
+          // ========================================================
+          // Bounce off the top and bottom (y–axis boundaries).
+          // ========================================================
+          if (this.pos.y > cylinderHeight / 2 - this.radius) {
+            this.pos.y = cylinderHeight / 2 - this.radius;
+            this.vel.y *= -1;
+          }
+          if (this.pos.y < -cylinderHeight / 2 + this.radius) {
+            this.pos.y = -cylinderHeight / 2 + this.radius;
+            this.vel.y *= -1;
+          }
+        }
+        
+        display() {
+          push();
+            // Move to the particle’s position.
+            translate(this.pos.x, this.pos.y, this.pos.z);
+            noStroke();
+            fill(this.col);
+            // Draw the particle as a small sphere.
+            sphere(this.radius);
+          pop();
+        }
+      }
+    </script>
+  </body>
+</html>

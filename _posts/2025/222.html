@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bouncing Ball in a Spinning Hexagon</title>
+  <style>
+    /* Remove default margin and set a dark background */
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #111;
+    }
+    canvas {
+      display: block;
+      background: #222;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="800" height="600"></canvas>
+  <script>
+    // Get canvas and context
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+
+    // Hexagon parameters
+    const hexCenter = { x: width / 2, y: height / 2 };
+    // Choose a radius that fits nicely inside the canvas.
+    const hexRadius = Math.min(width, height) * 0.4;
+    let hexRotation = 0;
+    // Angular velocity in radians per second.
+    const hexAngularVelocity = 1.0;
+
+    // Ball parameters
+    let ball = {
+      x: width / 2,
+      y: height / 2 - 100,  // start a bit above center
+      vx: 150,            // initial horizontal velocity (pixels per second)
+      vy: 0,              // initial vertical velocity
+      radius: 15
+    };
+
+    // Physics parameters
+    const gravity = 980;          // pixels per second²
+    const restitution = 0.8;      // how "bouncy" the collisions are (0-1)
+    const frictionCoefficient = 0.9; // applied to the tangential velocity on collision
+
+    let lastTime = performance.now();
+
+    // The main animation loop
+    function animate(time) {
+      // Calculate the time difference (in seconds)
+      const dt = (time - lastTime) / 1000;
+      lastTime = time;
+
+      // Update the hexagon’s rotation angle
+      hexRotation += hexAngularVelocity * dt;
+
+      // Update ball physics: apply gravity and update position
+      ball.vy += gravity * dt;
+      ball.x += ball.vx * dt;
+      ball.y += ball.vy * dt;
+
+      // Compute the vertices of the rotating hexagon.
+      // A regular hexagon has 6 vertices equally spaced around a circle.
+      let vertices = [];
+      for (let i = 0; i < 6; i++) {
+        const angle = hexRotation + i * Math.PI / 3; // 60° increments
+        const vx = hexCenter.x + hexRadius * Math.cos(angle);
+        const vy = hexCenter.y + hexRadius * Math.sin(angle);
+        vertices.push({ x: vx, y: vy });
+      }
+
+      // Check collision between the ball and each edge of the hexagon.
+      for (let i = 0; i < 6; i++) {
+        const A = vertices[i];
+        const B = vertices[(i + 1) % 6];
+
+        // Compute the vector from A to B.
+        const AB = { x: B.x - A.x, y: B.y - A.y };
+        // Compute the vector from A to the ball center.
+        const AP = { x: ball.x - A.x, y: ball.y - A.y };
+
+        // Project AP onto AB to find the closest point on the edge.
+        const ab2 = AB.x * AB.x + AB.y * AB.y;
+        let t = (AP.x * AB.x + AP.y * AB.y) / ab2;
+        t = Math.max(0, Math.min(1, t));  // Clamp t to the [0,1] range.
+
+        // The closest point on the edge:
+        const closest = {
+          x: A.x + AB.x * t,
+          y: A.y + AB.y * t
+        };
+
+        // Compute the distance between the ball's center and this closest point.
+        const dx = ball.x - closest.x;
+        const dy = ball.y - closest.y;
+        const dist = Math.hypot(dx, dy);
+
+        // If the ball is overlapping the edge...
+        if (dist < ball.radius) {
+          // Calculate how far the ball penetrates into the wall.
+          const penetration = ball.radius - dist;
+
+          // The collision normal (points from the edge toward the ball center)
+          let n = { x: dx, y: dy };
+          if (dist !== 0) {
+            n.x /= dist;
+            n.y /= dist;
+          } else {
+            // Avoid division by zero – choose an arbitrary normal.
+            n = { x: 0, y: 1 };
+          }
+
+          // Push the ball out so it is no longer overlapping.
+          ball.x += n.x * penetration;
+          ball.y += n.y * penetration;
+
+          // Compute the component of velocity along the normal.
+          const vDotN = ball.vx * n.x + ball.vy * n.y;
+          // Only respond if the ball is moving into the wall.
+          if (vDotN < 0) {
+            // Decompose the velocity into normal and tangential parts.
+            const v_normal = { x: n.x * vDotN, y: n.y * vDotN };
+            const v_tangent = { x: ball.vx - v_normal.x, y: ball.vy - v_normal.y };
+
+            // Reflect the normal component and reduce its magnitude using restitution.
+            const v_normal_reflected = { x: -restitution * v_normal.x, y: -restitution * v_normal.y };
+
+            // Apply friction to the tangential component.
+            v_tangent.x *= frictionCoefficient;
+            v_tangent.y *= frictionCoefficient;
+
+            // Update the ball's velocity.
+            ball.vx = v_normal_reflected.x + v_tangent.x;
+            ball.vy = v_normal_reflected.y + v_tangent.y;
+          }
+        }
+      }
+
+      // Clear the canvas.
+      ctx.clearRect(0, 0, width, height);
+
+      // Draw the spinning hexagon.
+      ctx.beginPath();
+      ctx.moveTo(vertices[0].x, vertices[0].y);
+      for (let i = 1; i < vertices.length; i++) {
+        ctx.lineTo(vertices[i].x, vertices[i].y);
+      }
+      ctx.closePath();
+      ctx.strokeStyle = 'cyan';
+      ctx.lineWidth = 4;
+      ctx.stroke();
+
+      // Draw the ball.
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+      ctx.fillStyle = 'orange';
+      ctx.fill();
+
+      // Request the next animation frame.
+      requestAnimationFrame(animate);
+    }
+
+    // Start the animation.
+    requestAnimationFrame(animate);
+  </script>
+</body>
+</html>

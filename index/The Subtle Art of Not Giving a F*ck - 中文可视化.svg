@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1000" height="700" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&amp;display=swap');
+        
+        text {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            fill: #e63946;
+        }
+        .subtitle {
+            font-size: 16px;
+            fill: #333;
+        }
+        .chapter-title {
+            font-size: 14px;
+            font-weight: bold;
+            fill: #fff;
+        }
+        .chapter-subtitle {
+            font-size: 12px;
+            fill: #333;
+        }
+        .concept-box {
+            fill: #f8f9fa;
+            stroke: #e63946;
+            stroke-width: 2;
+            rx: 10;
+            ry: 10;
+        }
+        .concept-title {
+            font-size: 14px;
+            font-weight: bold;
+            fill: #e63946;
+        }
+        .concept-text {
+            font-size: 12px;
+            fill: #333;
+        }
+        .connection {
+            stroke-width: 2;
+            stroke-dasharray: 5,5;
+        }
+    </style>
+    
+    <!-- 背景 -->
+    <rect width="1000" height="700" fill="#f5f5f5" />
+    
+    <!-- 标题 -->
+    <text x="500" y="40" text-anchor="middle" class="title">《不给一个F*ck的微妙艺术》</text>
+    <text x="500" y="70" text-anchor="middle" class="subtitle">马克·曼森著作的可视化总结</text>
+    
+    <!-- 主要概念圆圈 -->
+    <circle cx="500" cy="350" r="200" fill="#fff" stroke="#e63946" stroke-width="3" />
+    <text x="500" y="350" text-anchor="middle" font-size="20" font-weight="bold" fill="#e63946">值得在乎什么？</text>
+    
+    <!-- 第1章: 反向法则 -->
+    <circle cx="500" cy="100" r="50" fill="#e63946" opacity="0.9" />
+    <text x="500" y="100" text-anchor="middle" class="chapter-title">反向法则</text>
+    <path d="M500,150 Q500,200 500,250" class="connection" stroke="#e63946" fill="none" />
+    
+    <!-- 第2章: 幸福是个问题 -->
+    <circle cx="740" cy="180" r="50" fill="#457b9d" opacity="0.9" />
+    <text x="740" y="180" text-anchor="middle" class="chapter-title">幸福是个问题</text>
+    <path d="M700,210 Q650,250 600,270" class="connection" stroke="#457b9d" fill="none" />
+    
+    <!-- 第3章: 你并不特别 -->
+    <circle cx="820" cy="350" r="50" fill="#1d3557" opacity="0.9" />
+    <text x="820" y="350" text-anchor="middle" class="chapter-title">你并不特别</text>
+    <path d="M770,350 Q720,350 700,350" class="connection" stroke="#1d3557" fill="none" />
+    
+    <!-- 第4章: 苦难的价值 -->
+    <circle cx="740" cy="520" r="50" fill="#f4a261" opacity="0.9" />
+    <text x="740" y="520" text-anchor="middle" class="chapter-title">苦难的价值</text>
+    <path d="M700,490 Q650,450 600,430" class="connection" stroke="#f4a261" fill="none" />
+    
+    <!-- 第5章: 你总是在选择 -->
+    <circle cx="500" cy="600" r="50" fill="#2a9d8f" opacity="0.9" />
+    <text x="500" y="600" text-anchor="middle" class="chapter-title">总是在选择</text>
+    <path d="M500,550 Q500,500 500,450" class="connection" stroke="#2a9d8f" fill="none" />
+    
+    <!-- 第6章: 你对一切都是错的 -->
+    <circle cx="260" cy="520" r="50" fill="#e9c46a" opacity="0.9" />
+    <text x="260" y="510" text-anchor="middle" class="chapter-title">你对一切</text>
+    <text x="260" y="530" text-anchor="middle" class="chapter-title">都是错的</text>
+    <path d="M300,490 Q350,450 400,430" class="connection" stroke="#e9c46a" fill="none" />
+    
+    <!-- 第7章: 失败是前进的道路 -->
+    <circle cx="180" cy="350" r="50" fill="#264653" opacity="0.9" />
+    <text x="180" y="340" text-anchor="middle" class="chapter-title">失败是</text>
+    <text x="180" y="360" text-anchor="middle" class="chapter-title">前进的道路</text>
+    <path d="M230,350 Q280,350 300,350" class="connection" stroke="#264653" fill="none" />
+    
+    <!-- 第8章: 说不的重要性 -->
+    <circle cx="260" cy="180" r="50" fill="#e76f51" opacity="0.9" />
+    <text x="260" y="170" text-anchor="middle" class="chapter-title">说"不"的</text>
+    <text x="260" y="190" text-anchor="middle" class="chapter-title">重要性</text>
+    <path d="M300,210 Q350,250 400,270" class="connection" stroke="#e76f51" fill="none" />
+    
+    <!-- 第9章: 然后你死了 -->
+    <circle cx="500" cy="180" r="50" fill="#6d597a" opacity="0.9" />
+    <text x="500" y="180" text-anchor="middle" class="chapter-title">然后你死了</text>
+    <path d="M500,230 Q500,240 500,250" class="connection" stroke="#6d597a" fill="none" />
+    
+    <!-- 概念框 -->
+    <!-- 反向法则 -->
+    <rect x="50" y="50" width="200" height="80" class="concept-box" />
+    <text x="150" y="75" text-anchor="middle" class="concept-title">反向法则</text>
+    <text x="150" y="100" text-anchor="middle" class="concept-text">追求积极=消极</text>
+    <text x="150" y="120" text-anchor="middle" class="concept-text">接受消极=积极</text>
+    
+    <!-- 幸福 -->
+    <rect x="750" y="50" width="200" height="80" class="concept-box" />
+    <text x="850" y="75" text-anchor="middle" class="concept-title">幸福是个问题</text>
+    <text x="850" y="100" text-anchor="middle" class="concept-text">幸福来自解决问题</text>
+    <text x="850" y="120" text-anchor="middle" class="concept-text">明智选择你的奋斗</text>
+    
+    <!-- 责任 -->
+    <rect x="50" y="570" width="200" height="80" class="concept-box" />
+    <text x="150" y="595" text-anchor="middle" class="concept-title">你总是在选择</text>
+    <text x="150" y="620" text-anchor="middle" class="concept-text">对一切负责</text>
+    <text x="150" y="640" text-anchor="middle" class="concept-text">责任带来自由</text>
+    
+    <!-- 失败 -->
+    <rect x="750" y="570" width="200" height="80" class="concept-box" />
+    <text x="850" y="595" text-anchor="middle" class="concept-title">失败是前进的道路</text>
+    <text x="850" y="620" text-anchor="middle" class="concept-text">"做点什么原则"</text>
+    <text x="850" y="640" text-anchor="middle" class="concept-text">行动先于动机</text>
+    
+    <!-- 页脚 -->
+    <text x="500" y="680" text-anchor="middle" font-size="12" fill="#666">基于马克·曼森的《不给一个F*ck的微妙艺术》</text>
+</svg>
