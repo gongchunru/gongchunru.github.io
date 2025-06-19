@@ -1,4 +1,4 @@
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics with Cookie Consent -->
 <script defer src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google.id }}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -7,7 +7,35 @@
       dataLayer.push(arguments);
     }
 
+    // Set default consent state
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+
     gtag('js', new Date());
-    gtag('config', '{{ site.analytics.google.id }}');
+
+    // Check if user has already consented
+    function getCookie(name) {
+      const nameEQ = name + '=';
+      const ca = document.cookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    const cookieConsent = getCookie('cookie-consent');
+    if (cookieConsent === 'accepted') {
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+    }
+
+    gtag('config', '{{ site.analytics.google.id }}', {
+      'anonymize_ip': true,
+      'cookie_flags': 'SameSite=Lax;Secure'
+    });
   });
 </script>

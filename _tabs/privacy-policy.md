@@ -38,9 +38,30 @@ We use Google Analytics to understand how visitors interact with our website. Go
 
 ### Cookies / Cookie
 
-We use cookies and similar tracking technologies to track activity on our Service and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.
+We use cookies and similar tracking technologies to enhance your browsing experience and analyze our traffic. Here are the types of cookies we use:
 
-我们使用 Cookie 和类似的跟踪技术来跟踪我们服务上的活动。
+我们使用 Cookie 和类似的跟踪技术来增强您的浏览体验并分析我们的流量。以下是我们使用的 Cookie 类型：
+
+#### Essential Cookies / 必要 Cookie
+- **Purpose**: Enable basic website functionality / 用途：启用基本网站功能
+- **Duration**: Session or until you clear your browser / 持续时间：会话或直到您清除浏览器
+- **Legal Basis**: Legitimate interest / 法律依据：合法利益
+
+#### Analytics Cookies / 分析 Cookie
+- **Purpose**: Help us understand how visitors interact with our website / 用途：帮助我们了解访问者如何与我们的网站互动
+- **Provider**: Google Analytics / 提供商：Google Analytics
+- **Duration**: Up to 2 years / 持续时间：最多2年
+- **Legal Basis**: Your consent / 法律依据：您的同意
+
+#### Advertising Cookies / 广告 Cookie
+- **Purpose**: Deliver relevant advertisements / 用途：投放相关广告
+- **Provider**: Google AdSense / 提供商：Google AdSense
+- **Duration**: Up to 2 years / 持续时间：最多2年
+- **Legal Basis**: Your consent / 法律依据：您的同意
+
+You can manage your cookie preferences through our cookie consent banner or by adjusting your browser settings.
+
+您可以通过我们的 Cookie 同意横幅或调整浏览器设置来管理您的 Cookie 偏好。
 
 ## Google AdSense / Google AdSense
 
