@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: {{ site.url }}/sitemap.xml
+
+# Allow all search engines to crawl the site
+# Disallow crawling of admin and private directories
+Disallow: /admin/
+Disallow: /_site/
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Allow crawling of important pages for AdSense
+Allow: /privacy-policy/
+Allow: /terms/
+Allow: /contact/
+Allow: /disclaimer/
+Allow: /about/
+
+# Allow ads.txt
+Allow: /ads.txt

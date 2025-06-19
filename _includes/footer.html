@@ -28,6 +28,14 @@
     {% endif %}
   </p>
 
+  <!-- Legal Links -->
+  <div class="legal-links mb-2">
+    <a href="{{ '/privacy-policy/' | relative_url }}" class="text-muted me-3">Privacy Policy</a>
+    <a href="{{ '/terms/' | relative_url }}" class="text-muted me-3">Terms</a>
+    <a href="{{ '/disclaimer/' | relative_url }}" class="text-muted me-3">Disclaimer</a>
+    <a href="{{ '/contact/' | relative_url }}" class="text-muted">Contact</a>
+  </div>
+
   <p>
     {%- capture _platform -%}
       <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>

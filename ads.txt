@@ -1,0 +1,6 @@
+# ads.txt file for {{ site.url }}
+# This file is used to authorize digital advertising sellers
+# More info: https://iabtechlab.com/ads-txt/
+
+# Google AdSense
+google.com, pub-6469223357020423, DIRECT, f08c47fec0942fa0
