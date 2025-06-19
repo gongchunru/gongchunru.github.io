@@ -60,7 +60,7 @@ VS Code 2025 年 3 月更新，这次有不少重要功能和改进，目前看�
 
 - 提升了 Agent 模式和聊天编辑的可访问性，增加了更多听觉提示和详细的辅助说明，方便视障用户操作。
 
-更多更新内容，请参考：[VS Code 2025 年 3 月更新](http://code.visualstudio.com/updates/v1_99)
+更多更新内容，请参考：[VS Code 2025 年 3 月更新](https://code.visualstudio.com/updates/v1_99)
 
 
 ### 新的定价策略
