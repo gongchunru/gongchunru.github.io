@@ -56,3 +56,11 @@ tmp/
 .process.md
 .aider.chat.history.md
 .aider.input.history
+
+# AdSense 和部署相关的敏感文件
+ADSENSE_*.md
+DEBUG_*.md
+COOKIE_*.md
+check_deployment.sh
+github-action-log.txt
+*.log.txt
