@@ -64,3 +64,5 @@ COOKIE_*.md
 check_deployment.sh
 github-action-log.txt
 *.log.txt
+# Private notes file
+PRIVATE_NOTES.md
